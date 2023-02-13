@@ -17,9 +17,13 @@ git reset HEAD@{index}
 
 ```
 # créer une nouvelle branche à partir du master actuel
+
 git branch un-nom-de-nouvelle-branche
+
 # supprimer le dernier commit du master
+
 git reset HEAD~ --hard
 git checkout un-nom-de-nouvelle-branche
+
 # votre commit est désormais dans cette branche :)
 ```
