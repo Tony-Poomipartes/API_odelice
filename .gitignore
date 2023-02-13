@@ -1,0 +1,5 @@
+node_modules/
+coverage/
+sqitch.conf
+.env
+**/.DS_Store

@@ -1,0 +1,45 @@
+{
+  "name": "spedata-express-cadex-benoitoclock",
+  "version": "1.0.0",
+  "description": "En 1925, Jacques Prévert, André Breton, Frida Kahlo et une poignée d'autres figures emblématiques de l'époque s'ennuyaient et décidèrent de jouer à un jeu très simple mais hilarant (enfin, ça, ils ne le savaient pas avant d'y jouer mais ils l'ont rapidement constaté). En groupe de 3 à 5 personnes, chacun écrit une partie d'une phrase sur un papier, le plie de façon à masquer ce qu'il/elle a écrit et passe le papier à son voisin, qui écrit la suite... sans connaître le début. La première phrase générée, _le cadavre exquis boira le vin nouveau_, donna son nom au jeu.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "jest --verbose",
+    "dev": "DEBUG=cadex:* npx nodemon",
+    "dev-request": "DEBUG=cadex:server npx nodemon",
+    "dev-nodb": "DEBUG=cadex:*,-cadex:dataMapper npx nodemon",
+    "prod": "NODE_ENV=production npx nodemon",
+    "resetdb": "psql -d cadex -f data/create_tables.sql; psql -d cadex -f data/seeding.sql"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/O-clock-Maya/spedata-express-cadex-BenoitOClock.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/O-clock-Maya/spedata-express-cadex-BenoitOClock/issues"
+  },
+  "homepage": "https://github.com/O-clock-Maya/spedata-express-cadex-BenoitOClock#readme",
+  "dependencies": {
+    "bunyan": "^1.8.15",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-jsdoc-swagger": "^1.8.0",
+    "joi": "^17.7.0",
+    "pg": "^8.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.31.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^27.2.1",
+    "jest": "^29.3.1"
+  }
+}

@@ -1,0 +1,8 @@
+{"name":"Cadex API","hostname":"MacBook-Pro-de-Benoit.local","pid":89860,"level":30,"method":"GET","url":"/api/cadex","msg":"incoming request","time":"2023-01-19T09:39:28.037Z","v":0}
+{"name":"Cadex API","hostname":"MacBook-Pro-de-Benoit.local","pid":89860,"level":50,"msg":"relation \"name\" does not exist","time":"2023-01-19T09:39:28.043Z","v":0}
+{"name":"Cadex API","hostname":"MacBook-Pro-de-Benoit.local","pid":89922,"level":30,"method":"GET","url":"/api/cadex","msg":"incoming request","time":"2023-01-19T09:40:16.035Z","v":0}
+{"name":"Cadex API","hostname":"MacBook-Pro-de-Benoit.local","pid":89922,"level":50,"msg":"relation \"name\" does not exist","time":"2023-01-19T09:40:16.040Z","v":0}
+{"name":"Cadex API","hostname":"MacBook-Pro-de-Benoit.local","pid":90457,"level":30,"method":"GET","url":"/api/cadex","msg":"incoming request","time":"2023-01-19T10:00:50.298Z","v":0}
+{"name":"Cadex API","hostname":"MacBook-Pro-de-Benoit.local","pid":90457,"level":50,"msg":"la table name est vide, impossible de récupérer une valeur","time":"2023-01-19T10:00:50.306Z","v":0}
+{"name":"Cadex API","hostname":"MacBook-Pro-de-Benoit.local","pid":90511,"level":30,"method":"GET","url":"/api/cadex","msg":"incoming request","time":"2023-01-19T10:01:26.972Z","v":0}
+{"name":"Cadex API","hostname":"MacBook-Pro-de-Benoit.local","pid":90511,"level":30,"method":"GET","url":"/api/cadex","msg":"incoming request","time":"2023-01-19T10:34:49.814Z","v":0}

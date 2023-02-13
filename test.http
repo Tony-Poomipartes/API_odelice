@@ -1,0 +1,23 @@
+### Route principale
+GET http://localhost:3000/api/cadex
+
+### 404
+GET http://localhost:3000/api/codex
+
+### customisation cadex
+GET http://localhost:3000/api/cadex?name=nib&verb=retourne
+
+### customisations cadex avec valeur non valide
+GET http://localhost:3000/api/cadex?name=$$$&verb=retourne
+
+### customisations cadex avec propriété non valide
+GET http://localhost:3000/api/cadex?bidule=truc
+
+### ajout de termes
+POST http://localhost:3000/api/cadex
+Content-Type: application/json
+
+{
+  "name": "Miles Davis",
+  "verb": "trompe"
+}
