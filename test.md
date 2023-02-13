@@ -1,3 +1,7 @@
+
+[Cours Github] Apprendre Github de zéro – Travailler en équipe (2/2)
+7.30
+
 ## Zut, j'ai fait un truc horrible, par pitié dites-moi que git peut voyager dans le temps !?
 
 ```
