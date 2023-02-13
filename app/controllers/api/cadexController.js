@@ -21,6 +21,24 @@ const cadexController = {
     const cadex = { ...await cadexService.generate(), ...request.body };
     response.json({ ...cadex, cadex: `${cadex}` });
   },
+  async post(request, response) {
+    // on ajoute les données reçues
+    debug(request.body, 'cadexController.post');
+    await cadexService.updateData(request.body);
+    // on génére un cadex et on remplace les parties nécessaires
+    // autre syntaxe: const cadex = Object.assign(cadexService.generate(), request.body)
+    const cadex = { ...await cadexService.generate(), ...request.body };
+    response.json({ ...cadex, cadex: `${cadex}` });
+  },
+  async post(request, response) {
+    // on ajoute les données reçues
+    debug(request.body, 'cadexController.post');
+    await cadexService.updateData(request.body);
+    // on génére un cadex et on remplace les parties nécessaires
+    // autre syntaxe: const cadex = Object.assign(cadexService.generate(), request.body)
+    const cadex = { ...await cadexService.generate(), ...request.body };
+    response.json({ ...cadex, cadex: `${cadex}` });
+  },
 };
 
 module.exports = cadexController;
