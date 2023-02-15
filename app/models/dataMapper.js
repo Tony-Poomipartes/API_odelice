@@ -10,7 +10,7 @@ const dataMapper = {
    */
   async getRandomTermFromTable(tableName) {
     const preparedQuery = {
-      text: `SELECT * FROM ${tableName} ORDER BY randoaaaaaaaaaaaaaam() LIMIT 1`,
+      text: `SELECT * FROM ${tableName} ORDER BY random() LIMIT 1`,
     };
     const results = await client.query(preparedQuery);
     if (!results.rows.length) {
