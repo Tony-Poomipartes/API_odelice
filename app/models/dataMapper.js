@@ -12,7 +12,7 @@ const dataMapper = {
     const preparedQuery = {
       text: `SELECT * FROM ${tableName} ORDER BY random() LIMIT 1`,
     };
-    const results = await client.query(preparedQuery);
+    const results = await client.query(preparedQuery);//on test le commit
     if (!results.rows.length) {
       debug(`getting random term from table "${tableName}" but table is empty`);
       throw new Error(`la table ${tableName} est vide, impossible de récupérer une valeur`);
