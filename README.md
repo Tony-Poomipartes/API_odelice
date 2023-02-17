@@ -1,20 +1,95 @@
-# Cadavre exquis
+# Bonjour a tous
 
-En 1925, Jacques Prévert, André Breton, Frida Kahlo et une poignée d'autres figures emblématiques de l'époque s'ennuyaient et décidèrent de jouer à un jeu très simple mais hilarant (enfin, ça, ils ne le savaient pas avant d'y jouer mais ils l'ont rapidement constaté). En groupe de 3 à 5 personnes, chacun écrit une partie d'une phrase sur un papier, le plie de façon à masquer ce qu'il/elle a écrit et passe le papier à son voisin, qui écrit la suite... sans connaître le début. La première phrase générée, _le cadavre exquis boira le vin nouveau_, donna son nom au jeu.
+voici le guide d'utilisation git pour ce projet d'apotheose
 
-## Expressifions tout ça
+## voici les commandes classiques
 
-En 2020, un prof amateur de calembours, de farces et de jeux en tout genre décida d'en faire un sujet d'exercice, que vous lisez en ce moment. Et en lisant cette phrase, vous réalisez ce qu'il va falloir faire. Faut-il en dire plus ?
+pour un commit
 
-## Les data
+```bash
+git add .
+git commit -m" [le type de modification] : votre message pour decrire les modif que vous avez apportez"
+git push
+```
 
-Tout est dans `data/parts.json`, c'est un objet qui contient 4 catégories de mots, il suffit d'en piocher un au hasard dans chaque catégorie pour créer un cadavre exquis.
+exemple
 
-Et tout ça servi par une route GET `/cadex`, tout simplement.
+- `git commit -m" ⚙ feat: add new routes for the API "`
+- `git commit -m" 🔧 fix: fix the datamaper request"`
+-
 
-## Pour aller plus loin
+ou alors sans le git add .
 
-Ça marche, c'est aléatoire, c'est beau et drôle, mais c'est pas très varié. On peut imaginer 2 possibilités d'évolution, pas forcément exclusives :
+```bash
+git commit -a -m"[le type de modification] : votre message pour decrire les modif que vous avez apportez"
+git push
+```
 
-- La possibilité de décider d'un ou plusieurs morceaux et de laisser l'API décider du reste : pas de nouvelle route pour ça, le plus logique serait de passer des variables via la query string. Par exemple, la requête GET `/cadex?verb=empile` retourne un cadavre exquis pour lequel le verbe est _empile_.
-- La possibilité d'étendre le vocabulaire de l'API : pas question de modifier le JSON ou de déployer une BDD, juste d'ajouter un mot à un des sous-tableaux de l'objet créé à partir du JSON. On partirait sur du POST ici, puisqu'il y a une notion d'enregistrement (temporaire, certes) de l'info passée par l'utilisateur. Par exemple, la requête POST `/cadex` à laquelle on passerait le JSON suivant `{"name": "Jérôme Cahuzac"}` retournerait un cadex (on va pas perdre une occasion d'en créer un, quand même) utilisant cette nouvelle proposition, après l'avoir ajoutée aux noms existants.
+pour afficher les precedent commit
+
+- `git reflog`
+
+ou bien , plus en detail
+
+- `git log`
+
+[git convention](https://www.conventionalcommits.org/en/v1.0.0/)/ [video](https://www.youtube.com/watch?v=AlHohDBBAMY&ab_channel=Grafikart.fr)
+---
+
+<type>
+
+- 🧱 build: Système de build (example : gulp, webpack, npm)
+- ci: Intégration continue (example scopes: Travis, Circle, BrowserStack,
+SauceLabs)
+- 📚 docs: Documentation
+- ⚙ feat: Ajout d'une fonctionnalité
+- 🔧 fix: Correction de bug
+- 🏎 perf: Amélioration des performances
+- ➕ refactor: Changement du code qui ne change rien au fonctionnement
+- 🖌️ style: Changement du style du code (sans changer la logique)
+- 🔌 test: Modification des tests
+
+en anglais
+---
+
+- 🔧 fix: a commit of the type fix patches a bug in your codebase (this correlates with PATCH in Semantic Versioning).
+- ⚙ feat: a commit of the type feat introduces a new feature to the codebase (this correlates with MINOR in Semantic Versioning).
+- BREAKING CHANGE: a commit that has a footer BREAKING CHANGE:, or appends a ! after the type/scope, introduces a breaking API change (correlating with MAJOR in Semantic Versioning). A BREAKING CHANGE can be part of commits of any type.
+- types other than fix: and feat: are allowed, for example @commitlint/config-conventional (based on the Angular convention) recommends build:, chore:, ci:, docs:, style:, refactor:, perf:, test:, and others.
+- footers other than BREAKING CHANGE: <description> may be provided and follow a convention similar to git trailer format.
+
+## avant de commencer la journée de code
+
+toujours faire un git pull pour recuperer les dernieres mises a jour de vos branches
+
+```bash
+git pull
+```
+
+## les branches
+
+avant de commencer une fonction , toujours creer une branche dedié puis en refaire une avec votre nom
+
+```bash
+git checkout -b[nom de votre branche]
+ou
+git branch [nomDeLaBranche]
+puis
+git checkout [nomDeLaBranche]
+```
+
+exemple
+
+- `git checkout -b odeliceErrorController`
+
+puis de cette branche
+
+- `git checkout -b Tony_odeliceErrorController`
+
+pour afficher les branches
+
+`git branch`
+
+supprimer une branche(vous devez avoir fusionnez vos dernier commit avant)
+
+- `git branch -d [le nom de votre branche]`

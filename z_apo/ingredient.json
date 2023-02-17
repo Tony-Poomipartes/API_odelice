@@ -1,0 +1,1047 @@
+[
+  {
+    "name": "Ail",
+    "type": "condiment"
+  },
+  {
+    "name": "Ananas",
+    "type": "fruit"
+  },
+  {
+    "name": "Amande",
+    "type": "fruit à coque"
+  },
+  {
+    "name": "Aubergine",
+    "type": "légume"
+  },
+  {
+    "name": "Artichaut",
+    "type": "légume"
+  },
+  {
+    "name": "Aronia",
+    "type": "fruit"
+  },
+  {
+    "name": "Abricot",
+    "type": "fruit"
+  },
+  {
+    "name": "Aubépine",
+    "type": "plante"
+  },
+  {
+    "name": "Asperge",
+    "type": "légume"
+  },
+  {
+    "name": "Aneth",
+    "type": "herbe aromatique"
+  },
+  {
+    "name": "Amarante",
+    "type": "céréale"
+  },
+  {
+    "name": "Avocat",
+    "type": "fruit"
+  },
+  {
+    "name": "Algues",
+    "type": "plante marine"
+  },
+  {
+    "name": "Aloès",
+    "type": "plante médicinale"
+  },
+  {
+    "name": "Arroche",
+    "type": "légume-feuille"
+  },
+  {
+    "name": "Anchois",
+    "type": "poisson"
+  },
+  {
+    "name": "Aubépine",
+    "type": "plante"
+  },
+  {
+    "name": "Angélique",
+    "type": "plante aromatique"
+  },
+  {
+    "name": "Amande de terre",
+    "type": "tubercule"
+  },
+  {
+    "name": "Agneau",
+    "type": "viande"
+  },
+  {
+    "name": "Aloyau",
+    "type": "viande"
+  },
+  {
+    "name": "Arachide",
+    "type": "légumineuse"
+  },
+  {
+    "name": "Algue nori",
+    "type": "plante marine"
+  },
+  {
+    "name": "Agar-agar",
+    "type": "gélifiant"
+  },
+  {
+    "name": "Anis vert",
+    "type": "épice"
+  },
+  {
+    "name": "Amaretto",
+    "type": "liqueur"
+  },
+  {
+    "name": "Acacia",
+    "type": "fleur"
+  },
+  {
+    "name": "Aneth frais",
+    "type": "herbe aromatique"
+  },
+  {
+    "name": "Anguille",
+    "type": "poisson"
+  },
+  {
+    "name": "Aïoli",
+    "type": "sauce"
+  },
+  {
+    "name": "Anis étoilé",
+    "type": "épice"
+  },
+  {
+    "name": "Aiglefin",
+    "type": "poisson"
+  },
+  {
+    "name": "Açaï",
+    "type": "fruit"
+  },
+  {
+    "name": "Agastache",
+    "type": "herbe aromatique"
+  },
+  {
+    "name": "Ail des ours",
+    "type": "plante sauvage"
+  },
+  {
+    "name": "Aillet",
+    "type": "légume"
+  },
+  {
+    "name": "Aloyau",
+    "type": "viande"
+  },
+  {
+    "name": "Andouille",
+    "type": "charcuterie"
+  },
+  {
+    "name": "Anis étoilé",
+    "type": "épice"
+  },
+  {
+    "name": "Bacon",
+    "type": "charcuterie"
+  },
+  {
+    "name": "Bagel",
+    "type": "pain"
+  },
+  {
+    "name": "Bagna cauda",
+    "type": "sauce"
+  },
+  {
+    "name": "Balsamique",
+    "type": "vinaigre"
+  },
+  {
+    "name": "Bambou",
+    "type": "légume"
+  },
+  {
+    "name": "Banane",
+    "type": "fruit"
+  },
+  {
+    "name": "Bar",
+    "type": "poisson"
+  },
+  {
+    "name": "Barbecue",
+    "type": "cuisine"
+  },
+  {
+    "name": "Bardane",
+    "type": "plante sauvage"
+  },
+  {
+    "name": "Basilic",
+    "type": "herbe aromatique"
+  },
+  {
+    "name": "Basmati",
+    "type": "riz"
+  },
+  {
+    "name": "Bavette",
+    "type": "viande"
+  },
+  {
+    "name": "Béarnaise",
+    "type": "sauce"
+  },
+  {
+    "name": "Beaufort",
+    "type": "fromage"
+  },
+  {
+    "name": "Béchamel",
+    "type": "sauce"
+  },
+  {
+    "name": "Beignet",
+    "type": "pâtisserie"
+  },
+  {
+    "name": "Belle de Fontenay",
+    "type": "pomme de terre"
+  },
+  {
+    "name": "Beluga",
+    "type": "caviar"
+  },
+  {
+    "name": "Bercail",
+    "type": "fromage"
+  },
+  {
+    "name": "Bergeron",
+    "type": "fromage"
+  },
+  {
+    "name": "Bergamote",
+    "type": "agrume"
+  },
+  {
+    "name": "Betterave",
+    "type": "légume"
+  },
+  {
+    "name": "Beurre",
+    "type": "produit laitier"
+  },
+  {
+    "name": "Bigorneau",
+    "type": "fruit de mer"
+  },
+  {
+    "name": "Biscotte",
+    "type": "pain"
+  },
+  {
+    "name": "Biscuit",
+    "type": "pâtisserie"
+  },
+  {
+    "name": "Bison",
+    "type": "viande"
+  },
+  {
+    "name": "Bistrot",
+    "type": "restaurant"
+  },
+  {
+    "name": "Bitters",
+    "type": "boisson"
+  },
+  {
+    "name": "Blanc de poulet",
+    "type": "viande"
+  },
+  {
+    "name": "Blé",
+    "type": "céréale"
+  },
+  {
+    "name": "Blé noir",
+    "type": "céréale"
+  },
+  {
+  "name": "Blini",
+  "type": "plat"
+  },
+  {
+  "name": "Boeuf",
+  "type": "viande"
+  },
+  {
+  "name": "Bok choy",
+  "type": "légume"
+  },
+  {
+  "name": "Bolognaise",
+  "type": "sauce"
+  },
+  {
+  "name": "Bouillabaisse",
+  "type": "soupe de poisson"
+  },
+  {
+  "name": "Boulgour",
+  "type": "céréale"
+  },
+  {
+  "name": "Boulette",
+  "type": "viande ou poisson"
+  },
+  {
+  "name": "Bouquet garni",
+  "type": "herbes aromatiques"
+  },
+  {
+  "name": "Boursault",
+  "type": "fromage"
+  },
+  {
+  "name": "Boursin",
+  "type": "fromage"
+  },
+  {
+  "name": "Brandy",
+  "type": "alcool"
+  },
+  {
+  "name": "Brasserie",
+  "type": "restaurant"
+  },
+  {
+  "name": "Bresaola",
+  "type": "charcuterie"
+  },
+  {
+  "name": "Bretzel",
+  "type": "pâtisserie salée"
+  },
+  {
+  "name": "Brick",
+  "type": "feuille de pâte"
+  },
+  {
+  "name": "Brie",
+  "type": "fromage"
+  },
+  {
+  "name": "Brioche",
+  "type": "viennoiserie"
+  },
+  {
+  "name": "Brochette",
+  "type": "plat"
+  },
+  {
+  "name": "Brocoli",
+  "type": "légume"
+  },
+  {
+  "name": "Brunoise",
+  "type": "préparation culinaire"
+  },
+  {
+  "name": "Bruschetta",
+  "type": "pain grillé"
+  },
+  {
+  "name": "Bûche de chèvre",
+  "type": "fromage"
+  },
+  {
+  "name": "Bûche de Noël",
+  "type": "pâtisserie"
+  },
+  {
+  "name": "Buckwheat",
+  "type": "farine de sarrasin"
+  },
+  {
+  "name": "Buffalo",
+  "type": "viande"
+  },
+  {
+  "name": "Butternut",
+  "type": "courge"
+  },
+  {
+    "name": "Cacahuète",
+    "type": "fruit sec"
+  },
+  {
+    "name": "Cachaca",
+    "type": "alcool"
+  },
+  {
+    "name": "Café",
+    "type": "boisson"
+  },
+  {
+    "name": "Caille",
+    "type": "volaille"
+  },
+  {
+    "name": "Cajou",
+    "type": "fruit sec"
+  },
+  {
+    "name": "Calamar",
+    "type": "fruit de mer"
+  },
+  {
+    "name": "Cannelle",
+    "type": "épice"
+  },
+  {
+    "name": "Cantal",
+    "type": "fromage"
+  },
+  {
+    "name": "Capers",
+    "type": "condiment"
+  },
+  {
+    "name": "Capucine",
+    "type": "plante aromatique"
+  },
+  {
+    "name": "Carambole",
+    "type": "fruit exotique"
+  },
+  {
+    "name": "Caraway",
+    "type": "épice"
+  },
+  {
+    "name": "Carotte",
+    "type": "légume"
+  },
+  {
+    "name": "Cassava",
+    "type": "tubercule"
+  },
+  {
+    "name": "Cassoulet",
+    "type": "plat"
+  },
+  {
+    "name": "Cassis",
+    "type": "fruit"
+  },
+  {
+    "name": "Cassonade",
+    "type": "sucre"
+  },
+  {
+    "name": "Catfish",
+    "type": "poisson"
+  },
+  {
+    "name": "Caviar",
+    "type": "oeuf de poisson"
+  },
+  {
+    "name": "Céleri",
+    "type": "légume"
+  },
+  {
+    "name": "Cèpe",
+    "type": "champignon"
+  },
+  {
+    "name": "Cerfeuil",
+    "type": "plante aromatique"
+  },
+  {
+    "name": "Ceviche",
+    "type": "plat"
+  },
+  {
+    "name": "Chablis",
+    "type": "vin blanc"
+  },
+  {
+    "name": "Chai",
+    "type": "mélange d'épices"
+  },
+  {
+    "name": "Champagne",
+    "type": "vin pétillant"
+  },
+  {
+    "name": "Champignon",
+    "type": "champignon"
+  },
+  {
+    "name": "Chanterelle",
+    "type": "champignon"
+  },
+  {
+    "name": "Cheddar",
+    "type": "fromage"
+  },
+  {
+    "name": "Chèvre",
+    "type": "fromage"
+  },
+  {
+    "name": "Cherimoya",
+    "type": "fruit exotique"
+  },
+  {
+    "name": "Chestnut",
+    "type": "fruit sec"
+  },
+  {
+    "name": "Chevreuil",
+    "type": "viande"
+  },
+  {
+    "name": "Chèvrefeuille",
+    "type": "plante"
+  },
+  {
+    "nom": "Daikon",
+    "type": "légume"
+  },
+  {
+    "nom": "Dill",
+    "type": "herbe"
+  },
+  {
+    "nom": "Date",
+    "type": "fruit"
+  },
+  {
+    "nom": "Dulse",
+    "type": "algue"
+  },
+  {
+    "nom": "Dumplings",
+    "type": "plat"
+  },
+  {
+    "nom": "Dough",
+    "type": "pâte"
+  },
+  {
+    "nom": "Dragonfruit",
+    "type": "fruit"
+  },
+  {
+    "nom": "Ditalini",
+    "type": "pâte"
+  },
+  {
+    "nom": "Durian",
+    "type": "fruit"
+  },
+  {
+    "nom": "Dover Sole",
+    "type": "poisson"
+  },
+  {
+    "nom": "Dill Pickle",
+    "type": "condiment"
+  },
+  {
+    "nom": "Dolmades",
+    "type": "plat"
+  },
+  {
+    "nom": "Duck",
+    "type": "viande"
+  },
+  {
+    "nom": "Deer",
+    "type": "viande"
+  },
+  {
+    "nom": "Dark Chocolate",
+    "type": "confiserie"
+  },
+  {
+    "nom": "Dried Cherries",
+    "type": "fruit sec"
+  },
+  {
+    "nom": "Dried Mango",
+    "type": "fruit sec"
+  },
+  {
+    "nom": "Dried Pineapple",
+    "type": "fruit sec"
+  },
+  {
+    "nom": "Dried Apricots",
+    "type": "fruit sec"
+  },
+  {
+    "nom": "Dried Cranberries",
+    "type": "fruit sec"
+  },
+  {
+    "nom": "Dried Figs",
+    "type": "fruit sec"
+  },
+  {
+    "nom": "Dried Currants",
+    "type": "fruit sec"
+  },
+  {
+    "nom": "Dried Dates",
+    "type": "fruit sec"
+  },
+  {
+    "nom": "Dried Prunes",
+    "type": "fruit sec"
+  },
+  {
+    "nom": "Dried Mulberries",
+    "type": "fruit sec"
+  },
+  {
+    "nom": "Dried Goji Berries",
+    "type": "fruit sec"
+  },
+  {
+    "nom": "Dried Blueberries",
+    "type": "fruit sec"
+  },
+  {
+    "nom": "Dried Raspberries",
+    "type": "fruit sec"
+  },
+  {
+    "nom": "Dried Strawberries",
+    "type": "fruit sec"
+  },
+  {
+    "nom": "Dried Bananas",
+    "type": "fruit sec"
+  },
+  {
+    "nom": "Dijon Mustard",
+    "type": "condiment"
+  },
+  {
+    "nom": "Demi-Glace",
+    "type": "sauce"
+  },
+  {
+    "nom": "Dashi",
+    "type": "sauce"
+  },
+  {
+    "nom": "Dill ",
+    "type": "herbe"
+  },
+  {
+    "nom": "Dried Basil",
+    "type": "herbe"
+  },
+  {
+    "nom": "Échalote",
+    "type": "Légume"
+  },
+  {
+    "nom": "Endive",
+    "type": "Légume"
+  },
+  {
+    "nom": "Épinard",
+    "type": "Légume"
+  },
+  {
+    "nom": "Escargots",
+    "type": "Fruits de mer"
+  },
+  {
+    "nom": "Estragon",
+    "type": "Herbe"
+  },
+  {
+    "nom": "Églefin",
+    "type": "Poisson"
+  },
+  {
+    "nom": "Eau",
+    "type": "Boisson"
+  },
+  {
+    "nom": "Érable",
+    "type": "Sirop"
+  },
+  {
+    "nom": "Épeautre",
+    "type": "Céréale"
+  },
+  {
+    "nom": "Échalote grise",
+    "type": "Légume"
+  },
+  {
+    "nom": "Écrevisse",
+    "type": "Fruits de mer"
+  },
+  {
+    "nom": "Églefin fumé",
+    "type": "Poisson"
+  },
+  {
+    "nom": "Épeautre concassé",
+    "type": "Céréale"
+  },
+  {
+    "nom": "Endive rouge",
+    "type": "Légume"
+  },
+  {
+    "nom": "Estragon frais",
+    "type": "Herbe"
+  },
+  {
+    "nom": "Échalote sèche",
+    "type": "Légume"
+  },
+  {
+    "nom": "Échalion",
+    "type": "Légume"
+  },
+  {
+    "nom": "Églefin noir",
+    "type": "Poisson"
+  },
+  {
+    "nom": "Épices",
+    "type": "Assaisonnement"
+  },
+  {
+    "nom": "Épeautre perlé",
+    "type": "Céréale"
+  },
+  {
+    "nom": "Épeautre en flocons",
+    "type": "Céréale"
+  },
+  {
+    "nom": "Émincé de poulet",
+    "type": "Viande"
+  },
+  {
+    "nom": "Épeautre décortiqué",
+    "type": "Céréale"
+  },
+  {
+    "nom": "Estragon séché",
+    "type": "Herbe"
+  },
+  {
+    "nom": "Épinard en branche",
+    "type": "Légume"
+  },
+  {
+    "nom": "Épices à pain d'épices",
+    "type": "Assaisonnement"
+  },
+  {
+    "nom": "Églefin sauvage",
+    "type": "Poisson"
+  },
+  {
+    "nom": "Épaule de porc",
+    "type": "Viande"
+  },
+  {
+    "nom": "Eau gazeuse",
+    "type": "Boisson"
+  },
+  {
+    "nom": "Épeautre en grains",
+    "type": "Céréale"
+  },
+  {
+    "nom": "Écureuil",
+    "type": "Viande"
+  },
+  {
+    "nom": "Farine de blé",
+    "type": "Ingrédient sec"
+  },
+  {
+    "nom": "Fenouil",
+    "type": "Légume"
+  },
+  {
+    "nom": "Figue",
+    "type": "Fruit"
+  },
+  {
+    "nom": "Flageolet",
+    "type": "Légume sec"
+  },
+  {
+    "nom": "Fleur d'oranger",
+    "type": "Arôme"
+  },
+  {
+    "nom": "Fleur de sel",
+    "type": "Condiment"
+  },
+  {
+    "nom": "Foie gras",
+    "type": "Viande"
+  },
+  {
+    "nom": "Fromage",
+    "type": "Produit laitier"
+  },
+  {
+    "nom": "Fumet de poisson",
+    "type": "Base de sauce"
+  },
+  {
+    "nom": "Fusilli",
+    "type": "Pâte"
+  },
+  {
+    "nom": "Fève",
+    "type": "Légume"
+  },
+  {
+    "nom": "Fraise",
+    "type": "Fruit"
+  },
+  {
+    "nom": "Framboise",
+    "type": "Fruit"
+  },
+  {
+    "nom": "Fricassée de poulet",
+    "type": "Plat"
+  },
+  {
+    "nom": "Friture",
+    "type": "Cuisson"
+  },
+  {
+    "nom": "Frites",
+    "type": "Accompagnement"
+  },
+  {
+    "nom": "Fumet de volaille",
+    "type": "Base de sauce"
+  },
+  {
+    "nom": "Feuille de brick",
+    "type": "Pâte"
+  },
+  {
+    "nom": "Feuille de chêne",
+    "type": "Salade"
+  },
+  {
+    "nom": "Feuille de laurier",
+    "type": "Arôme"
+  },
+  {
+    "nom": "Feuille de menthe",
+    "type": "Herbe aromatique"
+  },
+  {
+    "nom": "Feuille de vigne",
+    "type": "Légume"
+  },
+  {
+    "nom": "Filet de boeuf",
+    "type": "Viande"
+  },
+  {
+    "nom": "Filet de cabillaud",
+    "type": "Poisson"
+  },
+  {
+    "nom": "Filet de poulet",
+    "type": "Viande"
+  },
+  {
+    "nom": "Filet mignon de porc",
+    "type": "Viande"
+  },
+  {
+    "nom": "Flan",
+    "type": "Dessert"
+  },
+  {
+    "nom": "Fleur de courgette",
+    "type": "Légume"
+  },
+  {
+    "nom": "Fond de volaille",
+    "type": "Base de sauce"
+  },
+  {
+    "nom": "Fondue de poireaux",
+    "type": "Accompagnement"
+  },
+  {
+    "nom": "Galette de riz",
+    "type": "Pâte"
+  },
+  {
+    "nom": "Galette des rois",
+    "type": "Dessert"
+  },
+  {
+    "nom": "Gambas",
+    "type": "Fruit de mer"
+  },
+  {
+    "nom": "Garam masala",
+    "type": "Mélange d'épices"
+  },
+  {
+    "nom": "Gaspacho",
+    "type": "Soupe"
+  },
+  {
+    "nom": "Gâteau",
+    "type": "Dessert"
+  },
+  {
+    "nom": "Gélatine",
+    "type": "Gélifiant"
+  },
+  {
+    "nom": "Gibier",
+    "type": "Viande"
+  },
+  {
+    "nom": "Gigot d'agneau",
+    "type": "Viande"
+  },
+  {
+    "nom": "Gingembre",
+    "type": "Épice"
+  },
+  {
+    "nom": "Girolle",
+    "type": "Champignon"
+  },
+  {
+    "nom": "Glace",
+    "type": "Dessert"
+  },
+  {
+    "nom": "Gnocchi",
+    "type": "Pâte"
+  },
+  {
+    "nom": "Gousse d'ail",
+    "type": "Condiment"
+  },
+  {
+    "nom": "Graine de coriandre",
+    "type": "Épice"
+  },
+  {
+    "nom": "Graine de sésame",
+    "type": "Graine"
+  },
+  {
+    "nom": "Gratin",
+    "type": "Plat"
+  },
+  {
+    "nom": "Gravlax",
+    "type": "Poisson"
+  },
+  {
+    "nom": "Grenade",
+    "type": "Fruit"
+  },
+  {
+    "nom": "Grillade",
+    "type": "Cuisson"
+  },
+  {
+    "nom": "Grillé",
+    "type": "Cuisson"
+  },
+  {
+    "nom": "Grondin",
+    "type": "Poisson"
+  },
+  {
+    "nom": "Groseille",
+    "type": "Fruit"
+  },
+  {
+    "nom": "Gruau",
+    "type": "Céréale"
+  },
+  {
+    "nom": "Gruyère",
+    "type": "Fromage"
+  },
+  {
+    "nom": "Guacamole",
+    "type": "Dip"
+  },
+  {
+    "nom": "Gâteau basque",
+    "type": "Dessert"
+  },
+  {
+    "nom": "Gâteau de semoule",
+    "type": "Dessert"
+  },
+  {
+    "nom": "Gésier",
+    "type": "Abats"
+  },
+  {
+    "nom": "Gigot de chevreuil",
+    "type": "Viande"
+  },
+  {
+    "nom": "Gingembre confit",
+    "type": "Confiserie"
+  },
+  {
+    "nom": "Gingembre ",
+    "type": "Épice"
+  },
+
+
+
+
+
+
+
+
+
+
