@@ -6,7 +6,7 @@ voici le guide d'utilisation git pour ce projet d'apotheose
 
 pour un commit
 
-```
+```bash
 git add .
 git commit -m" [le type de modification] : votre message pour decrire les modif que vous avez apportez"
 git push
@@ -20,12 +20,20 @@ exemple
 
 ou alors sans le git add .
 
-```
+```bash
 git commit -a -m"[le type de modification] : votre message pour decrire les modif que vous avez apportez"
 git push
 ```
 
-[git convention](https://www.conventionalcommits.org/en/v1.0.0/)
+pour afficher les precedent commit
+
+- `git reflog`
+
+ou bien , plus en detail
+
+- `git log`
+
+[git convention](https://www.conventionalcommits.org/en/v1.0.0/)/ [video](https://www.youtube.com/watch?v=AlHohDBBAMY&ab_channel=Grafikart.fr)
 ---
 
 <type>
@@ -54,7 +62,7 @@ en anglais
 
 toujours faire un git pull pour recuperer les dernieres mises a jour de vos branches
 
-```
+```bash
 git pull
 ```
 
@@ -62,8 +70,12 @@ git pull
 
 avant de commencer une fonction , toujours creer une branche dedié puis en refaire une avec votre nom
 
-```
+```bash
 git checkout -b[nom de votre branche]
+ou
+git branch [nomDeLaBranche]
+puis
+git checkout [nomDeLaBranche]
 ```
 
 exemple
@@ -74,4 +86,10 @@ puis de cette branche
 
 - `git checkout -b Tony_odeliceErrorController`
 
-on test
+pour afficher les branches
+
+`git branch`
+
+supprimer une branche(vous devez avoir fusionnez vos dernier commit avant)
+
+- `git branch -d [le nom de votre branche]`
