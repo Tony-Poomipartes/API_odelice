@@ -1,55 +1,27 @@
-/**
- * @typedef {object} cadex
- * @property {string} name - name used in cadex
- * @property {string} adjective - adjective used in cadex
- * @property {string} verb - verb used in cadex
- * @property {string} complement - complement used in cadex
- * @property {string} cadex - full cadex
- */
-
-/**
- * @typedef {object} error
- * @property {string} error - error description
- */
-const debug = require('debug')('cadex:service');
-const dataMapper = require('../models/dataMapper');
+const data = require('../../data/parts.json');
+const { getRandomArrayValue } = require('../helpers/random');
 
 const cadexService = {
-  async generate() {
-    debug('generating new cadex');
-    const promises = [
-      dataMapper.getRandomTermFromTable('name'),
-      dataMapper.getRandomTermFromTable('adjective'),
-      dataMapper.getRandomTermFromTable('verb'),
-      dataMapper.getRandomTermFromTable('complement'),
-    ];
-    const [name, adjective, verb, complement] = await Promise.all(promises);
-    const cadexObject = {
+  generate() {
+    const name = getRandomArrayValue(data.names);
+    const adjective = getRandomArrayValue(data.adjectives);
+    const verb = getRandomArrayValue(data.verbs);
+    const complement = getRandomArrayValue(data.complements);
+    return {
       name,
       adjective,
       verb,
       complement,
-      toString() {
+      glue() {
         // return `${this.name} ${this.adjective} ${this.verb} ${this.complement}`;
-        const { toString, correction, ...cadexParts } = this;
-        return Object.values(cadexParts).join(' ');
+        const { glue, ...cadexparts } = this;
+        return Object.values(cadexparts).join(' ');
       },
     };
-    // look for a correct
-    const combinaison = await dataMapper.getCombinaison(name, adjective, verb, complement);
-    if (combinaison) {
-      cadexObject.correction = {
-        cadex: combinaison.correction,
-        rating: combinaison.rating,
-      };
-    }
-    return cadexObject;
   },
-
-  async updateData(termsObj) {
-    debug('adding new cadex terms');
-    await dataMapper.addNewTerms(termsObj);
+  updateData(termsObj) {
+    console.log(Object.entries(termsObj));
   },
 };
-
+console.log('mon json', data);
 module.exports = cadexService;

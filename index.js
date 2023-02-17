@@ -1,10 +1,14 @@
 require('dotenv').config();
 
-const debug = require('debug')('cadex:server');
-const app = require('./app');
+const express = require('express');
+const router = require('./app/routers');
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || `3000`;
+
+const app = express();
+
+app.use(router);
 
 app.listen(port, () => {
-  debug(`Server ready: http://localhost:${port}`);
+  console.log(`🚀 Server ready: http://localhost:${port}🚀`);
 });
