@@ -60,7 +60,7 @@ en anglais
 
 ## avant de commencer la journée de code
 
-toujours faire un git pull pour recuperer les dernieres mises a jour de vos branches
+<mark style="background-color: #F0F">toujours</mark> faire un git pull pour recuperer les dernieres mises a jour de la branche main
 
 ```bash
 git pull
@@ -93,3 +93,9 @@ pour afficher les branches
 supprimer une branche(vous devez avoir fusionnez vos dernier commit avant)
 
 - `git branch -d [le nom de votre branche]`
+
+## le merge
+
+pour fusionner votre branche vous devez merge, le plus facile serait de le faire directement sur <mark style="background-color: #F0F">GITHUB</mark>
+
+- cliquez sur `compare & pull resquest`
