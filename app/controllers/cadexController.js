@@ -1,7 +1,7 @@
 const cadexService = require('../services/cadex');
 
 const cadexController = {
-  get(_, response) {
+  get(_, res) {
     const cadex = cadexService.generate();
     // plutôt que de simplement renvoyer une chaine de caractère
     // je souhaiterais recvoir un objet contenant les différentes parties
@@ -13,10 +13,10 @@ const cadexController = {
     // BONUS: Il est possible de procéder à la génération finale du cadex
     // sans faire appel à une nouvelle méthode comme glue()
     // essaie de trouver laquelle et implémente la.
-    // par exemple, je voudrais pouvoir faire response.send(`${cadex}`);
+    // par exemple, je voudrais pouvoir faire res.send(`${cadex}`);
     // et que cela renvoie le cadex complet.
 
-    response.send(cadex.glue());
+    res.send(cadex.glue());
   },
   post(req, res) {
     cadexService.updateData(req.body);
