@@ -1,39 +1,23 @@
--- Verify cadex:init on pg
+-- Verify oblog:init on pg
 BEGIN;
 
 SELECT
   "id",
-  "content"
+  "route",
+  "label"
 FROM
-  "name";
+  "category"
+WHERE false;
 
 SELECT
   "id",
-  "content"
+  "slug",
+  "title",
+  "excerpt",
+  "content",
+  "category_id"
 FROM
-  "adjective";
-
-SELECT
-  "id",
-  "content"
-FROM
-  "verb";
-
-SELECT
-  "id",
-  "content"
-FROM
-  "complement";
-
-SELECT
-  "id",
-  "name_id",
-  "adjective_id",
-  "verb_id",
-  "complement_id",
-  "correction",
-  "rating"
-FROM
-  "combinaison";
+  "post"
+WHERE false;
 
 ROLLBACK;

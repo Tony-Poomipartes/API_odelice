@@ -94,12 +94,15 @@ supprimer une branche(vous devez avoir fusionnez vos dernier commit avant)
 
 - `git branch -d [le nom de votre branche]`
 
-## le merge
+## la merge
 
 pour fusionner votre branche vous devez merge, le plus facile serait de le faire directement sur <mark style="background-color: #F0F">GITHUB</mark>
 
 - cliquez sur `compare & pull resquest`
 - ensuite laissez un commentaire a celui qui va valider votre pull request(optionel)
-- cliquez sur `create pull request`
+- cliquez sur `Draft pull request` (pour forcer a une review) ou `create pull request`(pour s'en passer)
+- cliquez sur `Ready for review` (si draft P.R.)
 - cliquez sur `Merge pull request` pour valider la fusion (<mark style="background-color: #F0F">toujours</mark> faire une review pour verifier les conflits)
 - cliquez sur `Confirm merge`
+
+[un probleme sur un commit ou une merge ?](https://ohshitgit.com/fr) / [la cheat sheet](https://training.github.com/downloads/fr/github-git-cheat-sheet.pdf) / [la fiche recap kourou](https://kourou.oclock.io/ressources/fiche-recap/git-et-github/)
