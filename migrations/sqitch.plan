@@ -1,4 +1,6 @@
 %syntax-version=1.0.0
-%project=cadex
+%project=oblog
 
-init 2023-01-19T08:57:37Z Benoît Schiex <benoit@oclock.io> # création des tables
+init 2023-01-20T08:44:12Z Benoît Schiex <benoit@oclock.io> # création des tables
+post_with_category 2023-01-24T09:47:25Z Yann Guilloux <yann@oclock.io> # Ajout d'une vue nous permettant de récupérer le label d'un catégorie en même temps que les posts
+functions 2023-01-26T13:09:48Z Yann Guilloux <yann@oclock.io> # ajout des fonctions CRUD pour les différentes table

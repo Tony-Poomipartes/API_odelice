@@ -1,10 +1,7 @@
--- Revert cadex:init from pg
+-- Revert oblog:init from pg
 BEGIN;
 
-DROP TABLE "name",
-"adjective",
-"verb",
-"complement",
-"combinaison";
+DROP TABLE "post",
+"category";
 
 COMMIT;
