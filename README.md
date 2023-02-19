@@ -99,3 +99,7 @@ supprimer une branche(vous devez avoir fusionnez vos dernier commit avant)
 pour fusionner votre branche vous devez merge, le plus facile serait de le faire directement sur <mark style="background-color: #F0F">GITHUB</mark>
 
 - cliquez sur `compare & pull resquest`
+- ensuite laissez un commentaire a celui qui va valider votre pull request(optionel)
+- cliquez sur `create pull request`
+- cliquez sur `Merge pull request` pour valider la fusion (<mark style="background-color: #F0F">toujours</mark> faire une review pour verifier les conflits)
+- cliquez sur `Confirm merge`
