@@ -33,8 +33,10 @@ ou bien , plus en detail
 
 - `git log`
 
+# les commits
+
+📝 Les commits s'ecrive en ANGLAIS 🇬🇧.
 [git convention](https://www.conventionalcommits.org/en/v1.0.0/)/ [video](https://www.youtube.com/watch?v=AlHohDBBAMY&ab_channel=Grafikart.fr)
----
 
 <type>
 
@@ -106,3 +108,11 @@ pour fusionner votre branche vous devez merge, le plus facile serait de le faire
 - cliquez sur `Confirm merge`
 
 [un probleme sur un commit ou une merge ?](https://ohshitgit.com/fr) / [la cheat sheet](https://training.github.com/downloads/fr/github-git-cheat-sheet.pdf) / [la fiche recap kourou](https://kourou.oclock.io/ressources/fiche-recap/git-et-github/)
+<details>
+<summary>📺 git status</summary>
+<br>
+Cette commande doit être la commande reflexe. Elle permet de connaitre l'état de votre projet vis à vis de git.
+Savoir dans quel état est notre git est très utile. Avec la commande suivante (`git add`), vous verrez que l'on peut ajouter un ou
+plusieurs dossiers. Savoir quel fichier ou dossier est en cours de "sauvegarde", quel dossier est suvi, quel dossier a été modifié
+peut donc vous sauver en évitant d'oublier d'inclure un fichier dans votre commit et donc dans le push.
+</details>
