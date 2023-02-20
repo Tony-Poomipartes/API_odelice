@@ -1,7 +1,7 @@
--- Revert oblog:init from pg
+-- Revert odelice:init from pg
+
 BEGIN;
 
-DROP TABLE "post",
-"category";
+-- XXX Add DDLs here.
 
 COMMIT;

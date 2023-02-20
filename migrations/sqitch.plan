@@ -1,6 +1,4 @@
 %syntax-version=1.0.0
-%project=oblog
+%project=odelice
 
-init 2023-01-20T08:44:12Z Benoît Schiex <benoit@oclock.io> # création des tables
-post_with_category 2023-01-24T09:47:25Z Yann Guilloux <yann@oclock.io> # Ajout d'une vue nous permettant de récupérer le label d'un catégorie en même temps que les posts
-functions 2023-01-26T13:09:48Z Yann Guilloux <yann@oclock.io> # ajout des fonctions CRUD pour les différentes table
+init 2023-02-20T22:17:51Z Tony Poomipartes <tony.p.pro@gmail.com> # create tables
