@@ -14,7 +14,7 @@ CREATE TABLE "member" (
     "password" VARCHAR(60) NOT NULL,--mot de passe
     "firstname" VARCHAR(60) NOT NULL,--prenom
     "lastname" VARCHAR(60) NOT NULL,--nom de famille
-    "pseudo" VARCHAR(60)(60) NOT NULL UNIQUE,--surnom
+    "pseudo" VARCHAR(60) NOT NULL UNIQUE,--surnom
     "picture" VARCHAR(255) ,--avatar
     "created_at" TIMESTAMPTZ NOT NULL DEFAULT now(),
     "updated_at" TIMESTAMPTZ
