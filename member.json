@@ -1,0 +1,34 @@
+{
+  "utilisateurs": [
+    {
+      "lastname": "Dupont",
+      "firstname": "Marie",
+      "email": "marie.dupont@example.com",
+      "pseudo": "mariette"
+    },
+    {
+      "lastname": "Martin",
+      "firstname": "Pierre",
+      "email": "pierre.martin@example.com",
+      "pseudo": "pierrot"
+    },
+    {
+      "lastname": "Lefebvre",
+      "firstname": "Sophie",
+      "email": "sophie.lefebvre@example.com",
+      "pseudo": "sosso"
+    },
+    {
+      "lastname": "Girard",
+      "firstname": "Antoine",
+      "email": "antoine.girard@example.com",
+      "pseudo": "antogir"
+    },
+    {
+      "lastname": "Lecomte",
+      "firstname": "Julie",
+      "email": "julie.lecomte@example.com",
+      "pseudo": "juju"
+    }
+  ]
+}
