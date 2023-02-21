@@ -19,6 +19,7 @@ SELECT
   "id",
   "name",
   "description",
+  "steps",
   "picture",
   "member_id"
 FROM
