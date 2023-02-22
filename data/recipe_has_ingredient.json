@@ -1,0 +1,183 @@
+[
+    {
+      "quantity": 736,
+      "units": "g",
+      "ingredient_id": 281,
+      "recipe_id": 2
+    },
+    {
+      "quantity": 163,
+      "units": "cl",
+      "ingredient_id": 127,
+      "recipe_id": 4
+    },
+    {
+      "quantity": 889,
+      "units": "ml",
+      "ingredient_id": 417,
+      "recipe_id": 3
+    },
+    {
+      "quantity": 309,
+      "units": "g",
+      "ingredient_id": 275,
+      "recipe_id": 4
+    },
+    {
+      "quantity": 629,
+      "units": "ml",
+      "ingredient_id": 56,
+      "recipe_id": 2
+    },
+    {
+      "quantity": 506,
+      "units": "cl",
+      "ingredient_id": 445,
+      "recipe_id": 1
+    },
+    {
+      "quantity": 540,
+      "units": "g",
+      "ingredient_id": 273,
+      "recipe_id": 3
+    },
+    {
+      "quantity": 604,
+      "units": "ml",
+      "ingredient_id": 82,
+      "recipe_id": 2
+    },
+    {
+      "quantity": 82,
+      "units": "cl",
+      "ingredient_id": 411,
+      "recipe_id": 1
+    },
+    {
+      "quantity": 422,
+      "units": "g",
+      "ingredient_id": 323,
+      "recipe_id": 1
+    },
+    {
+      "quantity": 449,
+      "units": "g",
+      "ingredient_id": 221,
+      "recipe_id": 4
+    },
+    {
+      "quantity": 33,
+      "units": "cl",
+      "ingredient_id": 464,
+      "recipe_id": 3
+    },
+    {
+      "quantity": 970,
+      "units": "ml",
+      "ingredient_id": 188,
+      "recipe_id": 1
+    },
+    {
+      "quantity": 313,
+      "units": "g",
+      "ingredient_id": 57,
+      "recipe_id": 2
+    },
+    {
+      "quantity": 111,
+      "units": "cl",
+      "ingredient_id": 408,
+      "recipe_id": 3
+    },
+    {
+      "quantity": 600,
+      "units": "g",
+      "ingredient_id": 155,
+      "recipe_id": 4
+    },
+    {
+      "quantity": 753,
+      "units": "g",
+      "ingredient_id": 402,
+      "recipe_id": 2
+    },
+    {
+      "quantity": 819,
+      "units": "ml",
+      "ingredient_id": 264,
+      "recipe_id": 1
+    },
+    {
+      "quantity": 778,
+      "units": "ml",
+      "ingredient_id": 119,
+      "recipe_id": 3
+    },
+    {
+      "quantity": 988,
+      "units": "g",
+      "ingredient_id": 155,
+      "recipe_id": 1
+    },
+    {
+    "quantity": 672,
+    "units": "grammes",
+    "ingredient_id": 413,
+    "recipe_id": 2
+    },
+    {
+    "quantity": 958,
+    "units": "grammes",
+    "ingredient_id": 327,
+    "recipe_id": 1
+    },
+    {
+    "quantity": 646,
+    "units": "grammes",
+    "ingredient_id": 265,
+    "recipe_id": 3
+    },
+    {
+    "quantity": 539,
+    "units": "grammes",
+    "ingredient_id": 482,
+    "recipe_id": 2
+    },
+    {
+    "quantity": 353,
+    "units": "grammes",
+    "ingredient_id": 74,
+    "recipe_id": 1
+    },
+    {
+    "quantity": 732,
+    "units": "grammes",
+    "ingredient_id": 184,
+    "recipe_id": 2
+    },
+    {
+    "quantity": 4,
+    "units": "unités",
+    "ingredient_id": 210,
+    "recipe_id": 4
+    },
+    {
+    "quantity": 167,
+    "units": "grammes",
+    "ingredient_id": 385,
+    "recipe_id": 1
+    },
+    {
+    "quantity": 633,
+    "units": "grammes",
+    "ingredient_id": 297,
+    "recipe_id": 3
+    },
+    {
+    "quantity": 437,
+    "units": "grammes",
+    "ingredient_id": 354,
+    "recipe_id": 1
+    }
+    
+]

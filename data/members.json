@@ -1,34 +1,39 @@
-{
-  "utilisateurs": [
+
+[
     {
       "lastname": "Dupont",
       "firstname": "Marie",
       "email": "marie.dupont@example.com",
-      "pseudo": "mariette"
+      "pseudo": "mariette",
+      "password": "123456789"
     },
     {
       "lastname": "Martin",
       "firstname": "Pierre",
       "email": "pierre.martin@example.com",
-      "pseudo": "pierrot"
+      "pseudo": "pierrot",
+      "password": "123456789"
     },
     {
       "lastname": "Lefebvre",
       "firstname": "Sophie",
       "email": "sophie.lefebvre@example.com",
-      "pseudo": "sosso"
+      "pseudo": "sosso",
+      "password": "123456789"
     },
     {
       "lastname": "Girard",
       "firstname": "Antoine",
       "email": "antoine.girard@example.com",
-      "pseudo": "antogir"
+      "pseudo": "antogir",
+      "password": "123456789"
     },
     {
       "lastname": "Lecomte",
       "firstname": "Julie",
       "email": "julie.lecomte@example.com",
-      "pseudo": "juju"
+      "pseudo": "juju",
+      "password": "123456789"
     }
   ]
-}
+
