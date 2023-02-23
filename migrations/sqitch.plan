@@ -1,6 +1,6 @@
 %syntax-version=1.0.0
 %project=odelice
 
-init 2023-02-20T22:17:51Z Tony Poomipartes <tony.p.pro@gmail.com> # create tables
-functions 2023-02-21T23:03:34Z Tony Poomipartes <tony.p.pro@gmail.com> # create functions
-recipe_details 2023-02-22T22:45:34Z Tony Poomipartes <tony.p.pro@gmail.com> # create new view
+init 2023-02-21T10:06:55Z Tony Poomipartes <tony.p.pro@gmail.com> # create tables
+functions 2023-02-21T15:32:51Z David Mesdagh <mesdagh.david@orange.fr> # fonction ajout de recette dans la relation recipe
+recipe_details 2023-02-22T15:09:31Z Tony Poomipartes <tony.p.pro@gmail.com> # create views

@@ -44,6 +44,31 @@ class CoreController {
         response.json(results);
     }
 
+  /**
+   * modify one entry in a table
+   *
+   * @param {Object} request
+   * @param {Object} response
+   */
+  async modify(request, response) {
+    debug(`${this.constructor.name} modify`);
+    const { id } = request.params;
+    const results = await this.constructor.dataMapper.modify(id, request.body);
+    response.json(results);
+  }
+  
+    /**
+   * remove one entry in a table
+   *
+   * @param {Object} request
+   * @param {Object} response
+   */
+    async delete(request, response) {
+      debug(`${this.constructor.name} delete`);
+      const { id } = request.params;
+      await this.constructor.dataMapper.delete(id);
+      return response.status(204).send();
+    }
 }
 
 module.exports = CoreController;

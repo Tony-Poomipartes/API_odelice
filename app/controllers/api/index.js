@@ -1,5 +1,5 @@
 const recipeController = require('./recipeController');
-
+const memberController = require('./memberController');
 
 const apiController = {
     /**
@@ -16,5 +16,5 @@ const apiController = {
 };
 
 module.exports = {
-    apiController, recipeController,
+    apiController, recipeController, memberController
 };
