@@ -1,4 +1,4 @@
--- Verify odelice:functions on pg
+-- Verify odelice:new_function on pg
 
 BEGIN;
 

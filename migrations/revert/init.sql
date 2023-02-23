@@ -6,6 +6,6 @@ BEGIN;
 -- XXX Add DDLs here.
 DROP TABLE
 "member", "recipe", "comment", "ingredient", "recipe_has_ingredient" ;
-DROP DOMAIN
+DROP DOMAIN 
 "email";
 COMMIT;

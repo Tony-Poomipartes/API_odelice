@@ -1,5 +1,6 @@
 const express = require('express');
 const recipeRouter = require('./recipeRouter');
+const memberRouter = require('./memberRouter');
 const { apiController } = require('../../controllers/api');
 const NoResourceFoundError = require('../../errors/NoResourceFoundError');
 const apiErrorHandler = require('../../errors/helpers/apiErrorHandler');
@@ -17,6 +18,8 @@ const router = express.Router();
 router.all('/', apiController.getHome);
 
 router.use('/recipes', recipeRouter);
+
+router.use('/members', memberRouter);
 
 router.use((request, response, next) => {
     next(new NoResourceFoundError());

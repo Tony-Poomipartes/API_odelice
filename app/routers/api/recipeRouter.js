@@ -3,7 +3,7 @@ const controllerHandler = require('../../controllers/helpers/controllerHandler')
 const { recipeController } = require('../../controllers/api');
 const validate = require('../../validations/validate');
 
-const { post: recipePostSchema } = require('../../validations/schemas/recipe.schema');
+const { post: recipePostSchema, patch: recipePatchSchema } = require('../../validations/schemas/recipe.schema');
 
 const router = express.Router();
 
@@ -58,6 +58,19 @@ router.post('/', validate(recipePostSchema, "body"), controllerHandler(recipeCon
  */
 router.get('/:id([0-9]+)', controllerHandler(recipeController.getOne.bind(recipeController)));
 
-
+/**
+ * PATCH /api/recipes/{id}
+ *
+ * @summary modify a recipe
+ * @tags recipes
+ *
+ * @param {number} id.path - recipe id
+ * @param {string} request.route - recipe route
+ * @param {string} request.label - recipe label
+ *
+ * @return {recipe} 200 - success response
+ * @return {object} 500 - internal server error
+ */
+router.patch('/:id([0-9]+)', validate(recipePatchSchema, 'body'), controllerHandler(recipeController.modify.bind(recipeController)));
 
 module.exports = router;

@@ -9,6 +9,14 @@ const schema = {
       pseudo: Joi.string().required(),
       picture: Joi.string(),
     }).required(),
+    patch: Joi.object({
+      email: Joi.string().pattern(/^[a-zA-Z0-9.!#$%&''*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/),
+      password: Joi.string(),
+      firstname: Joi.string(),
+      lastname: Joi.string(),
+      pseudo: Joi.string(),
+      picture: Joi.string(),
+    }).required(),
 };
 
 module.exports = schema;

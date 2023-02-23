@@ -1,5 +1,35 @@
-node_modules/
-coverage/
-sqitch.conf
+# OS X
+**/.DS_Store*
+**/Icon?
+**/._*
+
+# Windows
+**/Thumbs.db
+**/ehthumbs.db
+**/Desktop.ini
+
+# Linux
+**/.directory
+**/*~
+
+# npm
+node_modules
+package-lock.json
+*.gz
+
+#log
+**/*.log
+**/*.log.*
+
+#vscode
+.vs_code/
+
+#config
 .env
-**/.DS_Store
+sqitch.conf
+
+#test
+coverage/
+
+#documenation
+documentation/
