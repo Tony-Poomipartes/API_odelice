@@ -43,7 +43,6 @@ class CoreDataMapper {
     */
     async create(createObj) {
         debug(`${this.constructor.name} create`);
-
         const preparedQuery = {
             text: `
                 SELECT * FROM new_${this.constructor.tableName}($1)
@@ -52,6 +51,39 @@ class CoreDataMapper {
         };
         const results = await client.query(preparedQuery);
         return results.rows[0];
+    }
+
+    /**
+   * modify an entry
+   *
+   * @param {number} id - the entry id
+   * @param {Object} obj - the modifications
+   * @returns {Object} the modified entry
+   */
+    async modify(id, modObject) {
+        debug(`${this.constructor.name} modify(${id})`);
+        const preparedQuery = {
+            text: `
+                SELECT * FROM update_${this.constructor.tableName}($1)
+            `,
+            values: [{ ...modObject, id }],
+        };
+        const results = await client.query(preparedQuery);
+        return results.rows[0];
+    }
+
+    /**
+    * remove an entry
+    *
+    * @param {number} id - the entry id
+    */
+    async delete(id) {
+        debug(`${this.constructor.name} delete(${id})`);
+        const preparedQuery = {
+            text: `DELETE FROM "${this.constructor.tableName}" WHERE id=$1`,
+            values: [id],
+        };
+        await client.query(preparedQuery);
     }
 }
 

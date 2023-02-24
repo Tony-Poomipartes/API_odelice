@@ -1,6 +1,6 @@
 const express = require('express');
 const controllerHandler = require('../../controllers/helpers/controllerHandler');
-const { recipeController } = require('../../controllers/api');
+const { recipeController, recipe_detailsController } = require('../../controllers/api');
 const validate = require('../../validations/validate');
 
 const { post: recipePostSchema, patch: recipePatchSchema } = require('../../validations/schemas/recipe.schema');
@@ -30,7 +30,7 @@ const router = express.Router();
  * @return {array<Recipe>} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.get('/', controllerHandler(recipeController.getAll.bind(recipeController)));
+router.get('/', controllerHandler(recipe_detailsController.getAll.bind(recipe_detailsController)));
 
 /**
  * POST /api/recipes
@@ -38,12 +38,12 @@ router.get('/', controllerHandler(recipeController.getAll.bind(recipeController)
  * @summary create a new recipe
  * @tags Recipes - The O'Delices recipes
  *
- * @param {Recipe} request.body - recipe
+ * @param {Recipe} request.body - recipe body
  *
  * @return {Recipe} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.post('/', validate(recipePostSchema, "body"), controllerHandler(recipeController.create.bind(recipeController)));
+router.post('/', validate(recipePostSchema, 'body'), controllerHandler(recipeController.create.bind(recipeController)));
 
 /**
  * GET /api/recipes/{id}
@@ -56,21 +56,34 @@ router.post('/', validate(recipePostSchema, "body"), controllerHandler(recipeCon
  * @return {Recipe} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.get('/:id([0-9]+)', controllerHandler(recipeController.getOne.bind(recipeController)));
+router.get('/:id([0-9]+)', controllerHandler(recipe_detailsController.getOne.bind(recipe_detailsController)));
 
 /**
  * PATCH /api/recipes/{id}
  *
  * @summary modify a recipe
- * @tags recipes
+ * @tags Recipes - The O'Delices recipes
  *
  * @param {number} id.path - recipe id
- * @param {string} request.route - recipe route
- * @param {string} request.label - recipe label
+ * 
+ * @param {Recipe} request.body - recipe body
  *
- * @return {recipe} 200 - success response
+ * @return {Recipe} 200 - success response
  * @return {object} 500 - internal server error
  */
 router.patch('/:id([0-9]+)', validate(recipePatchSchema, 'body'), controllerHandler(recipeController.modify.bind(recipeController)));
+
+/**
+ * DELETE /api/recipes/{id}
+ *
+ * @summary delete a recipe
+ * @tags Recipes - The O'Delices recipes
+ *
+ * @param {number} id.path - category id
+ *
+ * @return {object} 204 - success response
+ * @return {object} 500 - internal server error
+ */
+router.delete('/:id([0-9]+)', controllerHandler(recipeController.delete.bind(recipeController)));
 
 module.exports = router;

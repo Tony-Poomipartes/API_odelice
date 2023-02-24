@@ -6,7 +6,7 @@ const swaggerOptions = {
     info: {
         version: '1.0.0',
         title: "O'Delices API",
-        description: 'api recettes de cuisines'
+        description: 'Plus besoin de se prendre la tête pour trouver des idées de recettes.'
     },
     filesPatttern: './**/*.js',
     swaggerUIPath: process.env.API_DOCUMENTATION_ROUTE ?? '/api-docs',
