@@ -1,6 +1,45 @@
 <%- include ('./partials/header.ejs') %>
-    <div class="card">
-        <h1>Bienvenue sur O'Delices API</h1>
-        <a href="/api-docs">Documentation</a>
+
+    <div class="globalcontainer">
+
+        <div class=backgroundeffect></div>
+
+        <div class="headerlogo">
+            <div class="logo"></div>
+            <h4>Plus besoin de se prendre la tête pour trouver des idées de recettes.</h4>
+        </div>
+
+        <div class="card">
+            <h1>Bienvenue sur O'Délices API</h1>
+            <a href="/api-docs">Documentation</a>
+        </div>
+
     </div>
+    <script>
+        const button = document.querySelector(".logo")
+        function rain() {
+            let amount = 500;
+            let body = document.querySelector('.backgroundeffect');
+            let i = 0;
+            while (i < amount) {
+                let drop = document.createElement('i');
+                let size = Math.random() * 1;
+                let posX = Math.floor(Math.random() * window.innerWidth);
+                let delay = Math.random() * -5;
+                let duration = Math.random() * 15;
+
+                drop.style.width = 2 + size + 'px';
+                drop.style.left = posX + 'px';
+                drop.style.animationDelay = delay + 's';
+                drop.style.animationDuration = 1 + duration + 's';
+                body.appendChild(drop);
+                i++;
+            }
+        }
+
+        button.addEventListener('dblclick', function () {
+            rain();
+        })
+    </script>
+
     <%- include ('./partials/footer.ejs') %>

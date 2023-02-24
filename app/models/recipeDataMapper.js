@@ -12,7 +12,6 @@ class RecipeDataMapper extends CoreDataMapper {
      */
     constructor() {
         super();
-
         debug('recipe data mapper created');
     }
 }

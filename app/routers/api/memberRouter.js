@@ -1,6 +1,6 @@
 const express = require('express');
 const controllerHandler = require('../../controllers/helpers/controllerHandler');
-const { memberController } = require('../../controllers/api');
+const { memberController, member_detailsController } = require('../../controllers/api');
 const validate = require('../../validations/validate');
 
 const { post: memberPostSchema, patch: memberPatchSchema  } = require('../../validations/schemas/member.schema');
@@ -10,13 +10,14 @@ const router = express.Router();
 /**
  * a member type
  *
- * @typedef {object} member
- * @property {number} email - member id
- * @property {string} password - member name
- * @property {string} firstname - member descrition
- * @property {string} lastname - member steps
- * @property {string} pseudo - member picture
- * @property {string} picture - member member_id
+ * @typedef {object} Member
+ * @property {number} id - member id
+ * @property {string} email - member email
+ * @property {string} password - member password
+ * @property {string} firstname - member firstname
+ * @property {string} lastname - member lastname
+ * @property {string} pseudo - member pseudo
+ * @property {string} picture - member picture
  * @property {string} created_at - date of creation
  * @property {string} updated_at - date of last update
  */
@@ -25,22 +26,22 @@ const router = express.Router();
  * GET /api/members
  *
  * @summary get all members
- * @tags members - The O'Delices members
+ * @tags Members - The O'Delices recipes
  *
- * @return {array<member>} 200 - success response
+ * @return {array<Member>} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.get('/', controllerHandler(memberController.getAll.bind(memberController)));
+router.get('/', controllerHandler(member_detailsController.getAll.bind(member_detailsController)));
 
 /**
  * POST /api/members
  *
  * @summary create a new member
- * @tags members - The O'Delices members
+ * @tags Members - The O'Delices recipes
  *
- * @param {member} request.body - member
+ * @param {Member} request.body - member
  *
- * @return {member} 200 - success response
+ * @return {Member} 200 - success response
  * @return {object} 500 - internal server error
  */
 router.post('/', validate(memberPostSchema, "body"), controllerHandler(memberController.create.bind(memberController)));
@@ -49,28 +50,41 @@ router.post('/', validate(memberPostSchema, "body"), controllerHandler(memberCon
  * GET /api/members/{id}
  *
  * @summary get a member
- * @tags members - The O'Delices members
+ * @tags Members - The O'Delices recipes
  *
  * @param {number} id.path - member id
  *
- * @return {member} 200 - success response
+ * @return {Member} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.get('/:id([0-9]+)', controllerHandler(memberController.getOne.bind(memberController)));
+router.get('/:id([0-9]+)', controllerHandler(member_detailsController.getOne.bind(member_detailsController)));
 
 /**
  * PATCH /api/members/{id}
  *
  * @summary modify a member
- * @tags members
+ * @tags Members - The O'Delices recipes
  *
  * @param {number} id.path - member id
- * @param {string} request.route - member route
- * @param {string} request.label - member label
+ * 
+ * @param {Member} request.body - member body
  *
- * @return {member} 200 - success response
+ * @return {Member} 200 - success response
  * @return {object} 500 - internal server error
  */
 router.patch('/:id([0-9]+)', validate(memberPatchSchema, 'body'), controllerHandler(memberController.modify.bind(memberController)));
+
+/**
+ * DELETE /api/members/{id}
+ *
+ * @summary delete a member
+ * @tags Members - The O'Delices recipes
+ *
+ * @param {number} id.path - member id
+ *
+ * @return {object} 204 - success response
+ * @return {object} 500 - internal server error
+ */
+router.delete('/:id([0-9]+)', controllerHandler(memberController.delete.bind(memberController)));
 
 module.exports = router;
