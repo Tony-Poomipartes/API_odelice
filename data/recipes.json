@@ -9,6 +9,7 @@
         "Préparer la vinaigrette en mélangeant du jus de citron, de l'huile d'olive, du sel et du poivre.",
         "Verser la vinaigrette sur la salade et mélanger le tout."
       ],
+      "picture": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Ap78vRxIfxi8F7_FU_9JYwHaGk%26pid%3DApi&f=1&ipt=fbed49acf92837c6c804b5f4996384923be3320f48afbcc2f63be06b6dac139f&ipo=images",
       "member_id": 1
     },
     {
@@ -22,6 +23,7 @@
         "Mélanger la sauce avec les pâtes cuites.",
         "Réchauffer légèrement les pâtes à la poêle avant de servir."
       ],
+      "picture": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.S8_ggwRKFpmwLycAf2G78wHaEO%26pid%3DApi&f=1&ipt=3ccb5c8ea8921d191e8c3cbf2ddf38daaf575018b54d94f371b73b516f275791&ipo=images",
       "member_id": 2
     },
     {
@@ -35,10 +37,11 @@
         "Ajouter le poulet cuit à la sauce et laisser mijoter encore quelques minutes.",
         "Servir avec du riz et du naan chaud."
       ],
+      "picture": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.8MixxbVhxva_S9QIqfgoMAHaEK%26pid%3DApi&f=1&ipt=4c10b9925b122edf99c0ae84132b0f3980593967fe3e4d3b831e149d30ab6749&ipo=images",
       "member_id": 3
     },
     {
-      "name": "Ragoût de bœuf",
+      "name": "Ragoût de boeuf",
       "description": "Un plat mijoté qui réconforte, avec du bœuf, des légumes, des pommes de terre et une sauce riche.",
       "steps": [
         "Faire revenir de la viande de bœuf coupée en cubes dans une cocotte.",
@@ -49,6 +52,7 @@
         "Mélanger de la farine avec de l'eau pour former une pâte, puis l'ajouter au ragoût pour épaissir la sauce.",
         "Servir chaud avec du pain frais."
       ],
+      "picture": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.WZDiWPRiPN1HhJfHIzFDNAHaE8%26pid%3DApi&f=1&ipt=c544a05d08fc5a876377d57e96094d12731566d7cdde478c25d4204c3d46cebe&ipo=images",
       "member_id": 4
     }
   ]

@@ -3,13 +3,13 @@
       "content": "J'ai adoré cette recette, c'était délicieux!",
       "rate": 5,
       "recipe_id":2,
-      "member_id":2
+      "member_id":5
     },
     {
       "content": "Je n'ai pas aimé du tout, c'était trop épicé pour moi.",
       "rate": 2,
-      "recipe_id":4,
-      "member_id":3
+      "recipe_id":2,
+      "member_id":1
     },
     {
       "content": "Je recommande vivement cette recette, c'était facile à faire et très savoureux!",
@@ -31,9 +31,9 @@
     },
     {
       "content": "Je n'ai pas pu m'empêcher de manger tout le plat! C'était trop bon!",
-      "rate": 5,
-      "recipe_id":1,
-      "member_id":3
+      "rate": 3,
+      "recipe_id":4,
+      "member_id":1
     },
     {
       "content": "C'était correct, mais je pense qu'il y avait trop d'ingrédients pour moi.",
@@ -45,19 +45,37 @@
       "content": "C'était une recette simple mais délicieuse. Je suis contente de l'avoir essayée!",
       "rate": 4,
       "recipe_id":3,
-      "member_id":1
+      "member_id":4
     },
     {
       "content": "Je ne suis pas sûr que j'ai aimé cette recette, mais je pense que cela pourrait convenir à d'autres personnes.",
       "rate": 3,
       "recipe_id":2,
-      "member_id":5
+      "member_id":3
     },
     {
       "content": "Wow, cette recette était vraiment spéciale! Je l'ai aimé dès la première bouchée.",
       "rate": 5,
       "recipe_id":1,
-      "member_id":1
+      "member_id":3
+    },
+    {
+      "content": "Je suis mitigé sur la qualite de cette recette, mais je pense qu'elle puet etre ameliorée.",
+      "rate": 3,
+      "recipe_id":4,
+      "member_id":3
+    },
+    {
+      "content": "Wow, cette recette était vraiment spéciale! Je ne suis pas tres fan.",
+      "rate": 2,
+      "recipe_id":4,
+      "member_id":5
+    },
+    {
+      "content": "trop d'épices pour cette recette! et il manque un peu d'assaisonnement.",
+      "rate": 1,
+      "recipe_id":4,
+      "member_id":2
     }
   ]
 

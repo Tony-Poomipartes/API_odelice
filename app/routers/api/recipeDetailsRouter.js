@@ -1,6 +1,6 @@
 const express = require('express');
 const controllerHandler = require('../../controllers/helpers/controllerHandler');
-const { recipeController } = require('../../controllers/api');
+const { recipeController, recipeWithDetailsController } = require('../../controllers/api');
 const validate = require('../../validations/validate');
 
 const { post: recipePostSchema, patch: recipePatchSchema } = require('../../validations/schemas/recipe.schema');
@@ -11,11 +11,14 @@ const router = express.Router();
  * a recipe type
  *
  * @typedef {object} Recipe
+ * @property {number} id - recipe id
  * @property {string} name - recipe name
  * @property {string} description - recipe descrition
  * @property {string} steps - recipe steps
  * @property {string} picture - recipe picture
  * @property {string} member_id - member member_id
+ * @property {string} created_at - date of creation
+ * @property {string} updated_at - date of last update
  */
 
 /**
@@ -27,7 +30,7 @@ const router = express.Router();
  * @return {array<Recipe>} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.get('/', controllerHandler(recipeController.getAll.bind(recipeController)));
+router.get('/', controllerHandler(recipeWithDetailsController.getAllDetails.bind(recipeWithDetailsController)));
 
 /**
  * POST /api/recipes
@@ -53,7 +56,7 @@ router.post('/', validate(recipePostSchema, 'body'), controllerHandler(recipeCon
  * @return {Recipe} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.get('/:id([0-9]+)', controllerHandler(recipeController.getOne.bind(recipeController)));
+router.get('/:id([0-9]+)', controllerHandler(recipeWithDetailsController.getOneDetails.bind(recipeWithDetailsController)));
 
 /**
  * PATCH /api/recipes/{id}

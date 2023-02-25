@@ -1,10 +1,10 @@
 const debug = require('debug')('odelice:controllers');
 const CoreController = require('./CoreController');
-const member_detailsDataMapper = require('../../models/member_detailsDataMapper');
+const memberDetailsDataMapper = require('../../models/memberDetailsDataMapper');
 
 /** Class representing a member_details controller. */
-class member_detailsController extends CoreController {
-    static dataMapper = member_detailsDataMapper;
+class memberDetailsController extends CoreController {
+    static dataMapper = memberDetailsDataMapper;
 
     /**
      * create a member_details controller
@@ -17,4 +17,4 @@ class member_detailsController extends CoreController {
     }
 }
 
-module.exports = new member_detailsController();
+module.exports = new memberDetailsController();

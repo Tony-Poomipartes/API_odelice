@@ -2,6 +2,7 @@
 
 BEGIN;
 
-DROP FUNCTION "new_recipe", "new_member";
+DROP FUNCTION "new_recipe", "update_recipe", "new_member";
+
 
 COMMIT;

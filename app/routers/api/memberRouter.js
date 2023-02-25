@@ -1,6 +1,6 @@
 const express = require('express');
 const controllerHandler = require('../../controllers/helpers/controllerHandler');
-const { memberController, member_detailsController } = require('../../controllers/api');
+const { memberController, memberDetailsController } = require('../../controllers/api');
 const validate = require('../../validations/validate');
 
 const { post: memberPostSchema, patch: memberPatchSchema  } = require('../../validations/schemas/member.schema');
@@ -31,7 +31,7 @@ const router = express.Router();
  * @return {array<Member>} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.get('/', controllerHandler(member_detailsController.getAll.bind(member_detailsController)));
+router.get('/', controllerHandler(memberDetailsController.getAll.bind(memberDetailsController)));
 
 /**
  * POST /api/members
@@ -57,7 +57,7 @@ router.post('/', validate(memberPostSchema, "body"), controllerHandler(memberCon
  * @return {Member} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.get('/:id([0-9]+)', controllerHandler(member_detailsController.getOne.bind(member_detailsController)));
+router.get('/:id([0-9]+)', controllerHandler(memberDetailsController.getOne.bind(memberDetailsController)));
 
 /**
  * PATCH /api/members/{id}

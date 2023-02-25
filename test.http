@@ -1,23 +1,49 @@
 ### Route principale
-GET http://localhost:3000/api/cadex
+GET http://localhost:3000/api/members
+
+### Route principale
+GET http://localhost:3000/api/recipes
 
 ### 404
-GET http://localhost:3000/api/codex
+GET http://localhost:3000/api/rocipes
 
 ### customisation cadex
-GET http://localhost:3000/api/cadex?name=nib&verb=retourne
+GET http://localhost:3000/api/members?firstname=Julian
 
 ### customisations cadex avec valeur non valide
-GET http://localhost:3000/api/cadex?name=$$$&verb=retourne
+GET http://localhost:3000/api/member?firstname=$$$&email=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
-### customisations cadex avec propriété non valide
-GET http://localhost:3000/api/cadex?bidule=truc
 
-### ajout de termes
-POST http://localhost:3000/api/cadex
+### ajout de member
+POST http://localhost:3000/api/members
 Content-Type: application/json
 
 {
-  "name": "Miles Davis",
-  "verb": "trompe"
+  "email": "j.assange2@wikileaks.au",
+  "password": "USA.is_A-f*'inB1tch",
+  "firstname": "Julian2",
+  "lastname": "Assange2",
+  "pseudo": "Mendax2",
+  "picture": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.l8JoMRcKDyzYpcDlV4uQoQHaE8%26pid%3DApi&f=1&ipt=39a0c2ad4ff89dc6bab9b967d0a3ccae3d7dd7afe89a190fe571a2cd9a4877cf&ipo=images"
+}
+
+### ajout de termes
+POST http://localhost:3000/api/repipes
+Content-Type: application/json
+
+{
+  "name": "vault7",
+  "description": "one of the best leak's pie of the chief",
+  "steps": "{'get somme leaks from NSA', 'get somme leaks from CIA', 'get somme leaks from the army', 'get a whisleblower',' mix them well' , 'publish', 'wait and see'}",
+  "picture": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.8cNbfLcoC6v9UKDSDghnnAHaE8%26pid%3DApi&f=1&ipt=b424427b90df207488fbaa170d81984a0d8a222e85f39a5ca4fa9d80c7d3a223&ipo=images",
+  "member_id": 6
+}
+
+### ajout de ingredient
+POST http://localhost:3000/api/ingredients
+Content-Type: application/json
+
+{
+  "name": "potimarron",
+  "type": "légume"
 }

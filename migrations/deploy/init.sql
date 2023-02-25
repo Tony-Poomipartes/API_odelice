@@ -27,7 +27,7 @@ CREATE TABLE "recipe" (
     "name" VARCHAR(60) NOT NULL,--nom de la recette
     "description" TEXT NOT NULL,-- description de la recette
     "steps" TEXT NOT NULL,-- étapes de la recette
-    "picture" VARCHAR(255),-- photo de la recette
+    "picture" VARCHAR(255) NOT NULL,-- photo de la recette
     "member_id" INT REFERENCES "member"("id"),
     "created_at" TIMESTAMPTZ NOT NULL DEFAULT now(),
     "updated_at" TIMESTAMPTZ
