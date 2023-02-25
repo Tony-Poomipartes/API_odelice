@@ -12,7 +12,6 @@ class memberDataMapper extends CoreDataMapper {
      */
     constructor() {
         super();
-
         debug('member data mapper created');
     }
 }

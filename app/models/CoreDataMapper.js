@@ -50,7 +50,7 @@ class CoreDataMapper {
             values: [createObj],
         };
         const results = await client.query(preparedQuery);
-        return results.rows[0];
+        return results.rows;
     }
 
     /**

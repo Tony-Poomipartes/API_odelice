@@ -12,7 +12,6 @@ class ingredientDataMapper extends CoreDataMapper {
      */
     constructor() {
         super();
-
         debug('ingredient data mapper created');
     }
 }

@@ -12,7 +12,6 @@ class commentDataMapper extends CoreDataMapper {
      */
     constructor() {
         super();
-
         debug('comment data mapper created');
     }
 }
