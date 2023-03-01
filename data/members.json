@@ -8,32 +8,52 @@
       "password": "123456789"
     },
     {
-      "lastname": "Martin",
-      "firstname": "Pierre",
-      "email": "pierre.martin@example.com",
-      "pseudo": "pierrot",
-      "password": "123456789"
+      "email": "a.schwartz@demandprogress.org",
+      "password": "RIPaaronSwartz",
+      "firstname": "Aaron",
+      "lastname": "Swartz",
+      "pseudo": "TheInternet'sChild",
+      "picture": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.RqCk4ahvPvhcQgjaIrIZMgHaKR%26pid%3DApi&f=1&ipt=3c6bb39bc8c4b1e22f60437f44488816d14809f276b23ec9f0ee3294b38dd36f&ipo=images"
     },
     {
-      "lastname": "Lefebvre",
-      "firstname": "Sophie",
-      "email": "sophie.lefebvre@example.com",
-      "pseudo": "sosso",
-      "password": "123456789"
+      "email": "e.snowden@nsa.gov",
+      "password": "PRISM4ever",
+      "firstname": "Edward",
+      "lastname": "Snowden",
+      "pseudo": "TheTrueSpy",
+      "picture": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bing.com%2Fth%3Fid%3DOIP.VtX9i36z54QkOsCpkVfRswHaE8%26pid%3DApi&f=1"
     },
     {
-      "lastname": "Girard",
-      "firstname": "Antoine",
-      "email": "antoine.girard@example.com",
-      "pseudo": "antogir",
-      "password": "123456789"
+      "email": "b.bayard@fdn.fr",
+      "password": "netneutrality4life",
+      "firstname": "Benjamin",
+      "lastname": "Bayart",
+      "pseudo": "LeVieuxC**DesInternets",
+      "picture": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.AFsZSoIot56q5hx__RpV5wAAAA%26pid%3DApi&f=1&ipt=53d86c1c1c32aa3d9de285202461a0d4b994ec4922d407fd45704bb482447b2e&ipo=images"
     },
     {
-      "lastname": "Lecomte",
-      "firstname": "Julie",
-      "email": "julie.lecomte@example.com",
-      "pseudo": "juju",
-      "password": "123456789"
+      "email": "j.assange@wikileaks.au",
+      "password": "USA.is_A-f*'inB1tch",
+      "firstname": "Julian",
+      "lastname": "Assange",
+      "pseudo": "Mendax",
+      "picture": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.l8JoMRcKDyzYpcDlV4uQoQHaE8%26pid%3DApi&f=1&ipt=39a0c2ad4ff89dc6bab9b967d0a3ccae3d7dd7afe89a190fe571a2cd9a4877cf&ipo=images"
+    },
+    {
+      "email": "k.mitnick@hackers.net",
+      "password": "socialengineering4ever",
+      "firstname": "Kevin",
+      "lastname": "Mitnick",
+      "pseudo": "Condor",
+      "picture": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.neCdx-hx8awtywS9syL8SQHaE7%26pid%3DApi&f=1&ipt=c8bee577f5ccad205e9381f2d2b9feba2802e32c2f3178468edc630841e07d44&ipo=images"
+    },
+    {
+      "email": "s.stallman@fsf.org",
+      "password": "gnu4life!",
+      "firstname": "Richard",
+      "lastname": "Stallman",
+      "pseudo": "rms",
+      "picture": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.zh-E2Kulte2yAF7Uh67v3wHaEe%26pid%3DApi&f=1&ipt=e5fffec59131d5733f8e64fe995989c3431e7ed63815ab80f21461d4c1da356a&ipo=images"
     }
   ]
 

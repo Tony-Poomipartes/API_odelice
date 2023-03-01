@@ -1,18 +1,18 @@
 const debug = require('debug')('odelice:dataMapper');
 const CoreDataMapper = require('./CoreDataMapper');
-
-/** Class representing a member data mapper. */
-class MemberDataMapper extends CoreDataMapper {
+const client = require('./helpers/database');
+/** Class representing a auth data mapper. */
+class authDataMapper extends CoreDataMapper {
     static tableName = 'member';
 
     /**
-     * create a member data mapper
+     * create a auth data mapper
      *
      * @augments CoreDataMapper
      */
     constructor() {
         super();
-        debug('member data mapper created');
+        debug('auth data mapper created');
     }
     
       /**
@@ -32,4 +32,4 @@ class MemberDataMapper extends CoreDataMapper {
   }
 }
 
-module.exports = new MemberDataMapper();
+module.exports = new authDataMapper();

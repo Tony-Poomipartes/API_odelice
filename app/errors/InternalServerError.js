@@ -13,7 +13,7 @@ class InternalServerError extends Error {
             this.originalError = originalError;
             this.detail = this.originalError.message;
             if (this.originalError.code === '23505') {
-                const column = this.originalError.detail.match(/^Key \((.+)\)=/)[1];
+                const column = this.originalError.detail;
                 const { table } = this.originalError;
                 this.detail = `unique constraint violation on table '${table}', column '${column}'`;
             }

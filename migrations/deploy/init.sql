@@ -11,7 +11,7 @@ CREATE DOMAIN "email" AS text CHECK (
 CREATE TABLE "member" (
     "id" INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     "email" email NOT NULL UNIQUE,--La contrainte unique rajoute automatiquement un index sur le champ email.
-    "password" VARCHAR(60) NOT NULL,--mot de passe
+    "password" VARCHAR(255) NOT NULL,--mot de passe
     "firstname" VARCHAR(60) NOT NULL,--prenom
     "lastname" VARCHAR(60) NOT NULL,--nom de famille
     "pseudo" VARCHAR(60) NOT NULL UNIQUE,--surnom

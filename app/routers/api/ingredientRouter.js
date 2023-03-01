@@ -11,11 +11,8 @@ const router = express.Router();
  * a ingredient type
  *
  * @typedef {object} Ingredient
- * @property {number} id - ingredient id
  * @property {string} name - ingredient name
  * @property {string} type - ingredient type
- * @property {string} created_at - date of creation
- * @property {string} updated_at - date of last update
  */
 
 /**

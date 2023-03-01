@@ -178,6 +178,71 @@
     "units": "grammes",
     "ingredient_id": 354,
     "recipe_id": 1
+    },
+    {
+    "quantity": 50,
+    "units": "grammes",
+    "ingredient_id": 122,
+    "recipe_id": 5
+    },
+    {
+    "quantity": 250,
+    "units": "grammes",
+    "ingredient_id": 301,
+    "recipe_id": 5
+    },
+    {
+    "quantity": 100,
+    "units": "grammes",
+    "ingredient_id": 226,
+    "recipe_id": 5
+    },
+    {
+    "quantity": 2,
+    "units": "cl",
+    "ingredient_id": 276,
+    "recipe_id": 5
+    },
+    {
+    "quantity": 100,
+    "units": "grammes",
+    "ingredient_id": 521,
+    "recipe_id": 5
+    },
+    {
+    "quantity": 150,
+    "units": "grammes",
+    "ingredient_id": 199,
+    "recipe_id": 5
+    },
+    {
+    "quantity": 1,
+    "units": "pincée",
+    "ingredient_id": 546,
+    "recipe_id": 5
+    },
+    {
+    "quantity": 1,
+    "units": "sachet",
+    "ingredient_id": 329,
+    "recipe_id": 5
+    },
+    {
+    "quantity": 350,
+    "units": "grammes",
+    "ingredient_id": 50,
+    "recipe_id": 6
+    },
+    {
+    "quantity": 8,
+    "units": "nb",
+    "ingredient_id": 98,
+    "recipe_id": 6
+    },
+    {
+    "quantity": 800,
+    "units": "grammes",
+    "ingredient_id": 450,
+    "recipe_id": 6
     }
-    
 ]
