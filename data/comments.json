@@ -76,6 +76,24 @@
       "rate": 1,
       "recipe_id":4,
       "member_id":2
+    },
+    {
+      "content": "Cette pizza est une tuerie, le reblochon change des pizzas habituelles.",
+      "rate": 5,
+      "recipe_id":5,
+      "member_id":2
+    },
+    {
+      "content": "superbe recette la pate maison est trop bonne le melange des ingredients au top.",
+      "rate": 4,
+      "recipe_id":5,
+      "member_id":3
+    },
+    {
+      "content": "Recette originale j'ai bien aimé avec le fromage.",
+      "rate": 4,
+      "recipe_id":6,
+      "member_id":3
     }
   ]
 

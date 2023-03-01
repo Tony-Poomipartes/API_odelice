@@ -1,6 +1,6 @@
 const debug = require('debug')('odelice:controllers');
 const CoreController = require('./CoreController');
-const recipeWithDetailsDataMapper = require('../../models/recipeWithDetailsDataMapper');
+const recipeWithDetailsDataMapper = require('../../models/recipeDetailsDataMapper');
 
 /** Class representing a recipe controller. */
 class RecipeWithDetailsController extends CoreController {

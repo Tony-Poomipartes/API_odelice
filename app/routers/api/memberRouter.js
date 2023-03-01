@@ -11,15 +11,13 @@ const router = express.Router();
  * a member type
  *
  * @typedef {object} Member
- * @property {number} id - member id
  * @property {string} email - member email
  * @property {string} password - member password
+ * @property {string} passwordConfirm - passwordConfirm password
  * @property {string} firstname - member firstname
  * @property {string} lastname - member lastname
  * @property {string} pseudo - member pseudo
  * @property {string} picture - member picture
- * @property {string} created_at - date of creation
- * @property {string} updated_at - date of last update
  */
 
 /**
@@ -44,7 +42,7 @@ router.get('/', controllerHandler(memberDetailsController.getAll.bind(memberDeta
  * @return {Member} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.post('/', validate(memberPostSchema, "body"), controllerHandler(memberController.create.bind(memberController)));
+router.post('/', validate(memberPostSchema, "body"), controllerHandler(memberController.handleSignUpForm.bind(memberController)));
 
 /**
  * GET /api/members/{id}
@@ -57,7 +55,7 @@ router.post('/', validate(memberPostSchema, "body"), controllerHandler(memberCon
  * @return {Member} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.get('/:id([0-9]+)', controllerHandler(memberDetailsController.getOne.bind(memberDetailsController)));
+router.get('/:id([0-9]+)', controllerHandler(memberDetailsController.getOneDetails.bind(memberDetailsController)));
 
 /**
  * PATCH /api/members/{id}

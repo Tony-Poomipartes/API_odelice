@@ -1,27 +1,27 @@
 const debug = require('debug')('odelice:controllers');
 const CoreController = require('./CoreController');
-const memberDetailsDataMapper = require('../../models/memberDetailsDataMapper');
+const recipeDetailsDataMapper = require('../../models/recipeDetailsDataMapper');
 
-/** Class representing a member_details controller. */
-class MemberDetailsController extends CoreController {
-    static dataMapper = memberDetailsDataMapper;
+/** Class representing a recipe controller. */
+class RecipeDetailsController extends CoreController {
+    static dataMapper = recipeDetailsDataMapper;
 
     /**
-     * create a member_details controller
+     * create a recipe controller
     *
     * @augments CoreController
     */
     constructor() {
         super();
-        debug('memberDetailsController created');
+        debug('RecipeDetailsController created');
     }
 
     /**
-* responds with one entry from a table
-*
-* @param {Object} request
-* @param {Object} response
-*/
+   * responds with one recipes with comments and ingredients
+   *
+   * @param {Object} request
+   * @param {Object} response
+   */
     async getOneDetails(request, response) {
         debug(`${this.constructor.name} getOneDetails`);
         const { id } = request.params;
@@ -33,4 +33,4 @@ class MemberDetailsController extends CoreController {
     }
 }
 
-module.exports = new MemberDetailsController();
+module.exports = new RecipeDetailsController();

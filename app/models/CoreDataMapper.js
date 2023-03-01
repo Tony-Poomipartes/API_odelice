@@ -1,5 +1,6 @@
 const debug = require('debug')('odelice:dataMapper');
 const client = require('./helpers/database');
+const InternalServerError = require('../errors/InternalServerError');
 
 /** Class representing a abstract data mapper. */
 class CoreDataMapper {
@@ -43,6 +44,7 @@ class CoreDataMapper {
     */
     async create(createObj) {
         debug(`${this.constructor.name} create`);
+        
         const preparedQuery = {
             text: `
                 SELECT * FROM new_${this.constructor.tableName}($1)

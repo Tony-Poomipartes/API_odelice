@@ -11,13 +11,10 @@ const router = express.Router();
  * a comment type
  *
  * @typedef {object} Comment
- * @property {number} id - comment id
  * @property {string} content - comment content
  * @property {string} rate - comment rate
  * @property {string} member_id - member member_id
  * @property {string} recipe_id - comment recipe_id
- * @property {string} created_at - date of creation
- * @property {string} updated_at - date of last update
  */
 
 /**

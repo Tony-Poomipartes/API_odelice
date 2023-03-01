@@ -54,6 +54,33 @@
       ],
       "picture": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.WZDiWPRiPN1HhJfHIzFDNAHaE8%26pid%3DApi&f=1&ipt=c544a05d08fc5a876377d57e96094d12731566d7cdde478c25d4204c3d46cebe&ipo=images",
       "member_id": 4
+    },
+    {
+      "name": "Pizza du Chef au reblochon",
+      "description": "Une pizza fait maison avec du jambon, des champignons, des courgettes, du reblochon et une pointe de creme fraiche.",
+      "steps": [
+        "mélanger votre farine avec de l’huile d’olive, du sel et de la levure délayée dans un peu d’eau tiède.",
+        "Placez cette pâte dans un saladier et laissez reposer pendant 30 minutes.",
+        "Coupez le jambon, émincez des champignons, taillez des courgettes, découpez la reblochon.",
+        "Après la demi-heure de repos de votre pâte, étalez-la puis répartissez la sauce tomate. Garnissez ensuite avec les ingrédients.",
+        "Placez ensuite votre pizza dans un four préalablement préchauffé à 250° et laissez cuire la pizza pendant 7 à 10 minutes.",
+        "Rajouter une pointe de creme fraiche, votre pizza est prête à être dégustée."
+      ],
+      "picture": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.WZDiWPRiPN1HhJfHIzFDNAHaE8%26pid%3DApi&f=1&ipt=c544a05d08fc5a876377d57e96094d12731566d7cdde478c25d4204c3d46cebe&ipo=images",
+      "member_id": 5
+    },
+    {
+      "name": "Cailles au beaufort",
+      "description": "Une recette de Cailles frites aux beaufort et aux aromates.",
+      "steps": [
+        "Cuire les cailles dans une cocotte avec du vin blanc, de l'ail, des oignons et un bouquet garni.",
+        "Découpez les pommes de terre en frites bien grosses.",
+        "mettez a cuire les frites au four avec un filet de beurre clarifié",
+        "Décortiquez les Cailles et les saupoudrer de beaufort.",
+        "Servez les cailles avec les fites bien dorées."
+      ],
+      "picture": "image recette caille",
+      "member_id": 1
     }
   ]
 
