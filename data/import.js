@@ -123,7 +123,15 @@ async function importData(client) {
 }
 
 (async () => {
-  const client = new Client({ database: process.env.PGDATABASE });
+  const client = new Client({ 
+    database: process.env.PGDATABASE
+    // remplacer process.env.PGDATABASE par les infos ci-dessous
+    // user:'postgres',
+    // host:'containers-us-west-188.railway.app',
+    // database:'railway',
+    // password:'hxwt6lq6FHRdjR5HfJ43',
+    // port: 7856
+  });
   await client.connect();
   await importData(client);
   client.end();

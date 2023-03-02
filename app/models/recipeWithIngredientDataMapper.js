@@ -5,7 +5,7 @@ const InternalServerError = require('../errors/InternalServerError');
 
 /** Class representing a recipe data mapper. */
 class RecipeWithIngredientDataMapper extends CoreDataMapper {
-    static tableName = 'recipe';
+    static tableName = 'recipe_has_ingredient';
     /**
     * create a recipe data mapper
     *

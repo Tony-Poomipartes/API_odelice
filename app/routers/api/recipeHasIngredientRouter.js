@@ -1,6 +1,6 @@
-_const express = require('express');
+const express = require('express');
 const controllerHandler = require('../../controllers/helpers/controllerHandler');
-const { recipeController } = require('../../controllers/api');
+const { recipeController, recipeDetailsController } = require('../../controllers/api');
 const validate = require('../../validations/validate');
 
 const { post: recipePostSchema, patch: recipePatchSchema } = require('../../validations/schemas/recipe.schema');
@@ -11,14 +11,10 @@ const router = express.Router();
  * a recipe type
  *
  * @typedef {object} Recipe
- * @property {number} id - recipe id
- * @property {string} name - recipe name
- * @property {string} description - recipe descrition
- * @property {string} steps - recipe steps
- * @property {string} picture - recipe picture
+ * @property {string} quantity - quantity of the ingredient
+ * @property {string} units - units of the quantity
+ * @property {string} recipe_id - recipe recipe_id
  * @property {number} member_id - member member_ids
- * @property {string} created_at - date of creation
- * @property {string} updated_at - date of last update
  */
 
 /**
