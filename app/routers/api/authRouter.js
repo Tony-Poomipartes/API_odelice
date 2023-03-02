@@ -22,22 +22,11 @@ const router = express.Router();
  * @summary Login
  * @tags auth - The O'Delices recipes
  *
- * @param {auth} request.body - auth
+ * //@param {auth} request.body - auth
  *
  * @return {auth} 200 - success response
  * @return {object} 500 - internal server error
  */
 router.post('/login', validate(authPostSchema, "body"), controllerHandler(authController.login.bind(authController)));
-
-/**
- * DELETE /api/auth/logout
- * @summary Logout
- * @tags auth - The O'Delices recipes
- 
- *
- * @return {object} 204 - success response
- * @return {object} 500 - internal server error
- */
-router.delete('/logout', controllerHandler(authController.logout.bind(authController)));
 
 module.exports = router;

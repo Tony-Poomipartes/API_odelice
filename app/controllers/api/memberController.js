@@ -16,17 +16,6 @@ class MemberController extends CoreController {
         debug('memberController created');
     }
 
-    /**
-    * create one entry in a table
-    *
-    * @param {Object} request
-    * @param {Object} response
-    */
-    async createMember(request, response) {
-        debug(`${this.constructor.name} create`);
-        const results = await this.constructor.dataMapper.create(request.body);
-        response.json(results);
-    }
 
   /**
    * responds with all posts from a given category
@@ -55,7 +44,7 @@ class MemberController extends CoreController {
     const saltRounds = 10;
     const salt = await bcrypt.genSalt(saltRounds);
     const hashedPassword = await bcrypt.hash(password, salt);
-    await this.constructor.dataMapper.create({
+    const results =await this.constructor.dataMapper.create({
       firstname,
       lastname,
       email,
@@ -63,6 +52,22 @@ class MemberController extends CoreController {
       picture,
       password: hashedPassword
     });
+    response.json(results);
+  }
+  /**
+  * responds with one entry from a table
+  *
+  * @param {Object} request
+  * @param {Object} response
+  */
+  async getOneDetails(request, response) {
+    debug(`${this.constructor.name} getOneDetails`);
+    const { id } = request.params;
+    const results = await this.constructor.dataMapper.findByPk(id);
+    if (results) {
+        return response.json(results);
+    }
+    return response.status(204).send();
   }
 }
 

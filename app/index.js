@@ -30,7 +30,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use((request, _, next) => {
     debug(`${request.method} ${request.url} - ${request.ip}`);
     next();
-
 });
 
 app.use(router);
