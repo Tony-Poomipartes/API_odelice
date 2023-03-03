@@ -25,17 +25,13 @@ class MemberController extends CoreController {
    */
   async handleSignUpForm(request, response) {
     debug(`${this.constructor.name} handleSignUpForm`);
-    // const categoryId = request.params.id;
     const {
-      firstname,
-      lastname,
       email,
-      picture,
-      pseudo,
       password,
-      passwordConfirm
+      passwordConfirm,
+      pseudo
     } = request.body;
-    if(!firstname || !lastname || !email || !pseudo ||!password || !passwordConfirm) {
+    if(!email || !pseudo || !password || !passwordConfirm) {
       return response.json({ errorMessage: "Please fill all the fields1" });
     }
     if(password !== passwordConfirm) {

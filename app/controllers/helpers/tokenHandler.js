@@ -17,7 +17,7 @@ const authMiddleware = (request, response, next) => {
   }
   const token = authHeader.split(' ')[1];
   try {
-    const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+    const decoded = jwt.verify(token, '&11+_CG*BcBJ,O&B1_FAkRrPV21*_m^CHhùW3-Oezu3knIE8');
     request.userId = decoded.id;
     next();
   } catch (err) {

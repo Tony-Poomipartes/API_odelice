@@ -1,16 +1,16 @@
 const express = require('express');
 const controllerHandler = require('../../controllers/helpers/controllerHandler');
-const { recipeController, recipeDetailsController } = require('../../controllers/api');
+const { recipeHasIngredientController} = require('../../controllers/api');
 const validate = require('../../validations/validate');
 
-const { post: recipePostSchema, patch: recipePatchSchema } = require('../../validations/schemas/recipe.schema');
+const { post: recipeHasIngredientPostSchema, patch: recipeHasIngredientPatchSchema } = require('../../validations/schemas/recipe.schema');
 
 const router = express.Router();
 
 /**
- * a recipe type
+ * a RecipeHasIngredient type
  *
- * @typedef {object} Recipe
+ * @typedef {object} RecipeHasIngredient
  * @property {string} quantity - quantity of the ingredient
  * @property {string} units - units of the quantity
  * @property {string} recipe_id - recipe recipe_id
@@ -18,68 +18,68 @@ const router = express.Router();
  */
 
 /**
- * GET /api/recipes
+ * GET /api/RecipeHasIngredient
  *
- * @summary get all recipes
- * @tags Recipes - The O'Delices recipes
+ * @summary get all RecipeHasIngredient
+ * @tags RecipeHasIngredient - The O'Delices recipes
  *
- * @return {array<Recipe>} 200 - success response
+ * @return {array<RecipeHasIngredient>} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.get('/', controllerHandler(recipeController.getAll.bind(recipeController)));
+router.get('/', controllerHandler(recipeHasIngredientController.getAll.bind(recipeHasIngredientController)));
 
 /**
- * GET /api/recipes/{id}
+ * GET /api/RecipeHasIngredient/{id}
  *
- * @summary get a recipe
- * @tags Recipes - The O'Delices recipes
+ * @summary get a RecipeHasIngredient
+ * @tags RecipeHasIngredient - The O'Delices RecipeHasIngredient
  *
- * @param {number} id.path - recipe id
+ * @param {number} id.path - RecipeHasIngredient id
  *
- * @return {Recipe} 200 - success response
+ * @return {RecipeHasIngredient} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.get('/:id([0-9]+)', controllerHandler(recipeController.getOneDetails.bind(recipeController)));
+router.get('/:id([0-9]+)', controllerHandler(recipeHasIngredientController.getOne.bind(recipeHasIngredientController)));
 
 /**
- * POST /api/recipes
+ * POST /api/RecipeHasIngredient
  *
  * @summary create a new recipe
- * @tags Recipes - The O'Delices recipes
+ * @tags RecipeHasIngredient - The O'Delices RecipeHasIngredient
  *
- * @param {Recipe} request.body - recipe body
+ * @param {RecipeHasIngredient} request.body - RecipeHasIngredient body
  *
- * @return {Recipe} 200 - success response
+ * @return {RecipeHasIngredient} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.post('/', validate(recipePostSchema, 'body'), controllerHandler(recipeController.create.bind(recipeController)));
+router.post('/', validate(recipeHasIngredientPostSchema, 'body'), controllerHandler(recipeHasIngredientController.create.bind(recipeHasIngredientController)));
 
 /**
- * PATCH /api/recipes/{id}
+ * PATCH /api/RecipeHasIngredient/{id}
  *
  * @summary modify a recipe
- * @tags Recipes - The O'Delices recipes
+ * @tags RecipeHasIngredient - The O'Delices RecipeHasIngredient
  *
  * @param {number} id.path - recipe id
  * 
- * @param {Recipe} request.body - recipe body
+ * @param {RecipeHasIngredient} request.body - RecipeHasIngredient body
  *
- * @return {Recipe} 200 - success response
+ * @return {RecipeHasIngredient} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.patch('/:id([0-9]+)', validate(recipePatchSchema, 'body'), controllerHandler(recipeController.modify.bind(recipeController)));
+router.patch('/:id([0-9]+)', validate(recipeHasIngredientPatchSchema, 'body'), controllerHandler(recipeHasIngredientController.modify.bind(recipeHasIngredientController)));
 
 /**
- * DELETE /api/recipes/{id}
+ * DELETE /api/RecipeHasIngredient/{id}
  *
  * @summary delete a recipe
- * @tags Recipes - The O'Delices recipes
+ * @tags RecipeHasIngredient - The O'Delices RecipeHasIngredient
  *
  * @param {number} id.path - category id
  *
  * @return {object} 204 - success response
  * @return {object} 500 - internal server error
  */
-router.delete('/:id([0-9]+)', controllerHandler(recipeController.delete.bind(recipeController)));
+router.delete('/:id([0-9]+)', controllerHandler(recipeHasIngredientController.delete.bind(recipeHasIngredientController)));
 
 module.exports = router;

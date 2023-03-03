@@ -1,4 +1,5 @@
 const recipeController = require('./recipeController');
+const recipeHasIngredientController = require('./recipeHasIngredientController');
 const memberController = require('./memberController');
 const authController = require('./authController');
 const commentController = require('./commentController');
@@ -24,5 +25,6 @@ module.exports = {
     memberController,
     commentController,
     ingredientController,
-    authController
+    authController,
+    recipeHasIngredientController
 };

@@ -1,6 +1,7 @@
 const debug = require('debug')('odelice:dataMapper');
 const CoreDataMapper = require('./CoreDataMapper');
 const client = require('./helpers/database');
+
 /** Class representing a auth data mapper. */
 class authDataMapper extends CoreDataMapper {
     static tableName = 'member';

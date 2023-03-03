@@ -15,7 +15,7 @@ CREATE TABLE "member" (
     "firstname" VARCHAR(60) NOT NULL,--prenom
     "lastname" VARCHAR(60) NOT NULL,--nom de famille
     "pseudo" VARCHAR(60) NOT NULL UNIQUE,--surnom
-    "picture" VARCHAR(255) ,--avatar
+    "picture" VARCHAR(255),--avatar
     "created_at" TIMESTAMPTZ NOT NULL DEFAULT now(),
     "updated_at" TIMESTAMPTZ
 );
