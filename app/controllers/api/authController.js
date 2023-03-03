@@ -42,12 +42,13 @@ class authController extends CoreController {
 
     const hashedPassword = existingUser.password;
     const passwordValidation = await bcrypt.compare(password, hashedPassword);
+    
     if (!passwordValidation) {
       return response.json("login", { errorMessage: "Incorrect Email or password" });
     }
 
-    const accessTokenSigned = jwt.sign(existingUser, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1d' });
-    const refreshTokenSigned = jwt.sign(existingUser, process.env.REFRESH_TOKEN_SECRET, { expiresIn: '1d' });
+    const accessTokenSigned = jwt.sign(existingUser, '&11+_CG*BcBJ,O&B1_FAkRrPV21*_m^CHhùW3-Oezu3knIE8', { expiresIn: '30s' });
+    const refreshTokenSigned = jwt.sign(existingUser, 'jùviCdAEHfu)2lèZùwTnz-Bh7A*!Sa343z,w2Z)k8FlD!TIe', { expiresIn: '1d' });
 
     return response.json(accessTokenSigned);
   }

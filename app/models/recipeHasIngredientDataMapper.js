@@ -4,7 +4,7 @@ const client = require('./helpers/database');
 const InternalServerError = require('../errors/InternalServerError');
 
 /** Class representing a recipe data mapper. */
-class RecipeWithIngredientDataMapper extends CoreDataMapper {
+class recipeHasIngredientDataMapper extends CoreDataMapper {
     static tableName = 'recipe_has_ingredient';
     /**
     * create a recipe data mapper
@@ -32,14 +32,14 @@ class RecipeWithIngredientDataMapper extends CoreDataMapper {
         return results.rows;
     }
 
-    /**
-    * remove an entry
-    *
-    * @param {number} id - the entry id
-    */
-    async delete() {
-    throw new InternalServerError('This is a view, you can only select rows from it');
-    }
+    // /**
+    // * remove an entry
+    // *
+    // * @param {number} id - the entry id
+    // */
+    // async delete() {
+    // throw new InternalServerError('This is a view, you can only select rows from it');
+    // }
 }
 
-module.exports = new RecipeWithIngredientDataMapper();
+module.exports = new recipeHasIngredientDataMapper();

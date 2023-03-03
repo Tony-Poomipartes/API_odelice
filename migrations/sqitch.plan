@@ -5,3 +5,4 @@ init 2023-02-21T10:06:55Z Tony Poomipartes <tony.p.pro@gmail.com> # create table
 functions 2023-02-21T15:32:51Z David Mesdagh <mesdagh.david@orange.fr> # fonction ajout de recette dans la relation recipe
 recipe_details 2023-02-22T15:09:31Z Tony Poomipartes <tony.p.pro@gmail.com> # create views
 member_details 2023-02-21T15:32:31Z Tony Poomipartes <tony.p.pro@gmail.com> # create views member_details
+recipeHasIngredient_details 2023-03-03T15:53:39Z Tony Poomipartes <tony.p.pro@gmail.com> # create a view to get recipes with one or more ingredients

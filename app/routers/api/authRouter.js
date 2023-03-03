@@ -22,7 +22,7 @@ const router = express.Router();
  * @summary Login
  * @tags auth - The O'Delices recipes
  *
- * //@param {auth} request.body - auth
+ * @param {auth} request.body - auth
  *
  * @return {auth} 200 - success response
  * @return {object} 500 - internal server error

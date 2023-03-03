@@ -1,5 +1,6 @@
 const express = require('express');
 const recipeRouter = require('./recipeRouter');
+const recipeHasIngredientRouter = require('./recipeHasIngredientRouter');
 const memberRouter = require('./memberRouter');
 const authRouter = require('./authRouter');
 const commentRouter = require('./commentRouter');
@@ -21,6 +22,7 @@ const router = express.Router();
 router.all('/', apiController.getHome);
 
 router.use('/recipes', recipeRouter);
+router.use('/recipeHasIngredient', recipeHasIngredientRouter);
 router.use('/members', memberRouter);
 router.use('/auth', authRouter);
 router.use('/comments', commentRouter);
