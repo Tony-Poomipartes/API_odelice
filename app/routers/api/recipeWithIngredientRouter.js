@@ -1,31 +1,31 @@
 const express = require('express');
 const controllerHandler = require('../../controllers/helpers/controllerHandler');
-const { recipeController } = require('../../controllers/api');
+const { recipeWithIngredientController } = require('../../controllers/api');
 const validate = require('../../validations/validate');
 
-const { post: recipePostSchema, patch: recipePatchSchema } = require('../../validations/schemas/recipe.schema');
+// const { post: recipeWithIngredientPostSchema, patch: recipeWithIngredientPatchSchema } = require('../../validations/schemas/recipeWithIngredient.schema');
 
 const router = express.Router();
 
 /**
- * a recipe type
+ * a recipeWithIngredient type
  *
- * @typedef {object} Recipe
- * @property {object} ingredients - recipe id
+ * @typedef {object} recipeWithIngredient
+ * @property {Array} ingredients - ingredient's name
  */
 
 /**
- * POST /api/recipes
+ * POST /api/recipeWithIngredient
  *
- * @summary create a new recipe
- * @tags Recipes - The O'Delices recipes
+ * @summary create a new recipeWithIngredient
+ * @tags recipeWithIngredient - The O'Delices recipeWithIngredients
  *
- * @param {Recipe} request.body - recipe body
+ * @param {recipeWithIngredient} request.body - recipeWithIngredient body
  *
- * @return {Recipe} 200 - success response
+ * @return {recipeWithIngredient} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.post('/', validate(recipePostSchema, 'body'), controllerHandler(recipeController.create.bind(recipeController)));
+router.post('/', controllerHandler(recipeWithIngredientController.getAllRecipes.bind(recipeWithIngredientController)));
 
 
 
