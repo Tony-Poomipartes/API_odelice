@@ -1,6 +1,7 @@
 const debug = require('debug')('odelice:dataMapper');
 const CoreDataMapper = require('./CoreDataMapper');
 const client = require('./helpers/database');
+const bcrypt = require('bcrypt');
 /** Class representing a member data mapper. */
 class MemberDataMapper extends CoreDataMapper {
 	static tableName = 'member';
@@ -14,7 +15,17 @@ class MemberDataMapper extends CoreDataMapper {
 		super();
 		debug('member data mapper created');
 	}
-
+    async modify(id, modObject) {
+        debug(`${this.constructor.name} modify(${id})`);
+        const preparedQuery = {
+            text: `
+                SELECT * FROM update_${this.constructor.tableName}($1)
+            `,
+            values: [{ ...modObject, id }],
+        };
+        const results = await client.query(preparedQuery);
+        return results.rows[0];
+    }
 	/**
 	* fetch an entry according to its email
 	*

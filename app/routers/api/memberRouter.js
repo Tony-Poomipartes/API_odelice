@@ -73,7 +73,7 @@ router.get('/:id([0-9]+)', controllerHandler(memberController.getOneDetails.bind
  * @return {Member} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.patch('/:id([0-9]+)', validate(memberPatchSchema, 'body'), controllerHandler(memberController.modify.bind(memberController)));
+router.patch('/:id([0-9]+)', validate(memberPatchSchema, 'body'), controllerHandler(memberController.modifyMember.bind(memberController)));
 
 /**
  * DELETE /api/members/{id}

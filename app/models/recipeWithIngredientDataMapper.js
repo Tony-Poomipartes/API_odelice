@@ -20,9 +20,8 @@ class recipeWithIngredientDataMapper extends CoreDataMapper {
        *
        * @returns {array} array of entries
        */
-    async findAllrecipes(ingredients) {
+    async findAllrecipes(list) {
         debug(`${this.constructor.name} findAll`);
-        console.log(ingredients);
         const preparedQuery = {
             text: `SELECT 
             "recipe_with_ingredients"."id",
@@ -39,15 +38,17 @@ class recipeWithIngredientDataMapper extends CoreDataMapper {
             SELECT "recipe_id"
             FROM "recipe_has_ingredient"
             JOIN "ingredient" ON "recipe_has_ingredient"."ingredient_id" = "ingredient"."id"
-            WHERE "ingredient"."name" IN (${ingredients.map((_, i) => `$${i+1}`).join(', ')})
+            WHERE "ingredient"."name" IN (${list.map((_, i) => `$${i+1}`).join(', ')})
             GROUP BY "recipe_id"
             HAVING COUNT(DISTINCT "ingredient"."id")  >0 
         ) AS "subquery" ON "recipe_with_ingredients"."id" = "subquery"."recipe_id";`,
-        values: [ingredients],
+        values: [...list],
         };
+        console.log(list);
         const results = await client.query(preparedQuery);
         return results.rows;
     }
 }
 
 module.exports = new recipeWithIngredientDataMapper();
+        //(${ingredients.map((_, i) => `$${i+1}`).join(', ')})
