@@ -17,7 +17,9 @@ class recipeWithIngredientController extends CoreController {
     }
     async getAllRecipes(request, response) {
       debug(`${this.constructor.name} getAll`);
-      const results = await this.constructor.dataMapper.findAllrecipes(request.body);
+      const ingredients = request.body.ingredients;
+      const results = await this.constructor.dataMapper.findAllrecipes(ingredients);
+      console.log(request.body);
       response.json(results);
   }
 }

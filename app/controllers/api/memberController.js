@@ -23,6 +23,37 @@ class MemberController extends CoreController {
    * @param {Object} request
    * @param {Object} response
    */
+  async modifyMember(request, response) {
+    debug(`${this.constructor.name} modifyMember`);
+    const { id } = request.params;
+    const {
+      password,
+      passwordConfirm,
+      pseudo
+    } = request.body;
+    if(password !== passwordConfirm) {
+      return response.json({ errorMessage: `Password does not match with the confirm` });
+    }
+    const saltRounds = 10;
+    const salt = await bcrypt.genSalt(saltRounds);
+    const hashedPassword = await bcrypt.hash(password, salt);
+    const results =await this.constructor.dataMapper.modify(id,{
+      firstname,
+      lastname,
+      email,
+      pseudo,
+      picture,
+      password: hashedPassword
+    });
+    response.json(results);
+  }
+
+  /**
+   * responds with all posts from a given category
+   *
+   * @param {Object} request
+   * @param {Object} response
+   */
   async handleSignUpForm(request, response) {
     debug(`${this.constructor.name} handleSignUpForm`);
     const {
