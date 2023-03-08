@@ -4,7 +4,7 @@ const controllerHandler = require('../../controllers/helpers/controllerHandler')
 const { commentController } = require('../../controllers/api');
 const validate = require('../../validations/validate');
 
-const { post: commentPostSchema, patch: commentPatchSchema } = require('../../validations/schemas/comment.schema');
+const { post: commentPostSchema, put: commentPutSchema } = require('../../validations/schemas/comment.schema');
 
 const router = express.Router();
 
@@ -43,7 +43,7 @@ router.get('/', controllerHandler(commentController.getAll.bind(commentControlle
  * @return {Comment} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.post('/', validate(commentPostSchema, "body"), controllerHandler(commentController.create.bind(commentController)));
+router.post('/', tokenHandler, validate(commentPostSchema, "body"), controllerHandler(commentController.create.bind(commentController)));
 
 /**
  * GET /api/comments/{id}
@@ -56,10 +56,10 @@ router.post('/', validate(commentPostSchema, "body"), controllerHandler(commentC
  * @return {Comment} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.get('/:id([0-9]+)', tokenHandler, controllerHandler(commentController.getOne.bind(commentController)));
+router.get('/:id([0-9]+)', controllerHandler(commentController.getOne.bind(commentController)));
 
 /**
- * PATCH /api/comments/{id}
+ * PUT /api/comments/{id}
  *
  * @summary modify a comment
  * @tags comments - The O'Delices comments
@@ -71,7 +71,7 @@ router.get('/:id([0-9]+)', tokenHandler, controllerHandler(commentController.get
  * @return {Comment} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.patch('/:id([0-9]+)', validate(commentPatchSchema, 'body'), controllerHandler(commentController.modify.bind(commentController)));
+router.put('/:id([0-9]+)', tokenHandler, validate(commentPutSchema, 'body'), controllerHandler(commentController.modify.bind(commentController)));
 
 /**
  * DELETE /api/comments/{id}
@@ -84,6 +84,6 @@ router.patch('/:id([0-9]+)', validate(commentPatchSchema, 'body'), controllerHan
  * @return {object} 204 - success response
  * @return {object} 500 - internal server error
  */
-router.delete('/:id([0-9]+)', controllerHandler(commentController.delete.bind(commentController)));
+router.delete('/:id([0-9]+)', tokenHandler, controllerHandler(commentController.delete.bind(commentController)));
 
 module.exports = router;

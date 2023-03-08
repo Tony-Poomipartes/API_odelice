@@ -23,14 +23,14 @@ class RecipeController extends CoreController {
    * @param {Object} response
    */
     async getOneDetails(request, response) {
-      debug(`${this.constructor.name} getOneDetails`);
-      const { id } = request.params;
-      const results = await this.constructor.dataMapper.findByPk(id);
-      if (results) {
-          return response.json(results);
-      }
-      return response.status(204).send();
-  }
+        debug(`${this.constructor.name} getOneDetails`);
+        const { id } = request.params;
+        const results = await this.constructor.dataMapper.findByPk(id);
+        if (results) {
+            return response.json(results);
+        }
+        return response.status(204).send();
+    }
 }
 
 module.exports = new RecipeController();

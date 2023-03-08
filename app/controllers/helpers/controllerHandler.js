@@ -1,4 +1,5 @@
 const debug = require('debug')('odelice:controllers');
+
 /**
  * Factory returning a controller with error handling
  *

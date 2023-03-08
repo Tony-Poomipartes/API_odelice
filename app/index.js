@@ -4,6 +4,8 @@ const express = require('express');
 const cors = require('cors');
 const router = require('./routers');
 const swagger = require('./helpers/swagger');
+const bodyParser = require('body-parser');
+
 
 const app = express();
 
@@ -16,7 +18,7 @@ swagger(app, path.join(__dirname, 'routers'));
 
 //cors setup
 const corsOptions = {
-    origin: process.env.CORS_DOMAIN ?? '*',
+    origin: process.env.CORS_DOMAIN ?? '*', //todo: etablir les CORS options
 };
 
 //middlewares setup
@@ -24,8 +26,8 @@ app.use(cors(corsOptions));
 app.use('/devdoc', express.static(path.join(__dirname, '../documentation/')));
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.json());
-
-app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use((request, _, next) => {
     debug(`${request.method} ${request.url} - ${request.ip}`);

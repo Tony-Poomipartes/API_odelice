@@ -55,7 +55,7 @@ router.get('/:id([0-9]+)', controllerHandler(recipeHasIngredientController.getOn
 router.post('/', validate(recipeHasIngredientPostSchema, 'body'), controllerHandler(recipeHasIngredientController.create.bind(recipeHasIngredientController)));
 
 /**
- * PATCH /api/RecipeHasIngredient/{id}
+ * PUT /api/RecipeHasIngredient/{id}
  *
  * @summary modify a recipe
  * @tags RecipeHasIngredient - The O'Delices RecipeHasIngredient
@@ -67,7 +67,7 @@ router.post('/', validate(recipeHasIngredientPostSchema, 'body'), controllerHand
  * @return {RecipeHasIngredient} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.patch('/:id([0-9]+)', validate(recipeHasIngredientPatchSchema, 'body'), controllerHandler(recipeHasIngredientController.modify.bind(recipeHasIngredientController)));
+router.put('/:id([0-9]+)', validate(recipeHasIngredientPatchSchema, 'body'), controllerHandler(recipeHasIngredientController.modify.bind(recipeHasIngredientController)));
 
 /**
  * DELETE /api/RecipeHasIngredient/{id}

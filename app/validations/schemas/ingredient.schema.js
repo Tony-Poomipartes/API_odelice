@@ -1,13 +1,19 @@
 const Joi = require('joi');
 
+
+
+const termRegex = /^\w/;
+
 const schema = {
-  post: Joi.object({
-    name: Joi.string().required(),
-    type: Joi.string().required(),
+
+  post: Joi.object().keys({
+    name: Joi.string().pattern(termRegex).required(),
+    type: Joi.string().pattern(termRegex).required(),
   }).required(),
-  patch: Joi.object({
-    name: Joi.string(),
-    type: Joi.string(),
+
+  put: Joi.object().keys({
+    name: Joi.string().pattern(termRegex),
+    type: Joi.string().pattern(termRegex),
   }).required(),
 };
 
