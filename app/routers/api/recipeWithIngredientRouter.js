@@ -3,7 +3,7 @@ const controllerHandler = require('../../controllers/helpers/controllerHandler')
 const { recipeWithIngredientController } = require('../../controllers/api');
 const validate = require('../../validations/validate');
 
-// const { post: recipeWithIngredientPostSchema, patch: recipeWithIngredientPatchSchema } = require('../../validations/schemas/recipeWithIngredient.schema');
+const { post: recipeWithIngredientPostSchema } = require('../../validations/schemas/recipeWithIngredient.schema');
 
 const router = express.Router();
 
@@ -25,7 +25,7 @@ const router = express.Router();
  * @return {recipeWithIngredient} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.post('/', controllerHandler(recipeWithIngredientController.getAllRecipes.bind(recipeWithIngredientController)));
+router.post('/', validate(recipeWithIngredientPostSchema, 'body'),controllerHandler(recipeWithIngredientController.getAllRecipes.bind(recipeWithIngredientController)));
 
 
 

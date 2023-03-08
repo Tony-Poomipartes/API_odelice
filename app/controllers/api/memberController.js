@@ -64,7 +64,7 @@ class MemberController extends CoreController {
       email,
       password,
       passwordConfirm,
-      picture,
+      picture, // = request.file.path,
       firstname,
       lastname,
       pseudo
@@ -103,6 +103,7 @@ class MemberController extends CoreController {
     }
     return response.status(204).send();
   }
+
 }
 
 module.exports = new MemberController();
