@@ -1,6 +1,6 @@
 class UserInputError extends Error {
   constructor(originalError) {
-    super('Les données transmises ne sont pas correctes');
+    super('The data transmitted is not correct');
     this.name = 'UserInputError';
     this.statusCode = 400;
     this.originalError = originalError;

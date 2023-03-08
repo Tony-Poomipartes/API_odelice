@@ -1,9 +1,10 @@
 const express = require('express');
+const tokenHandler = require('../../controllers/helpers/tokenHandler');
 const controllerHandler = require('../../controllers/helpers/controllerHandler');
 const { recipeController } = require('../../controllers/api');
 const validate = require('../../validations/validate');
 
-const { post: recipePostSchema, patch: recipePatchSchema } = require('../../validations/schemas/recipe.schema');
+const { post: recipePostSchema, put: recipePutSchema } = require('../../validations/schemas/recipe.schema');
 
 const router = express.Router();
 
@@ -19,6 +20,18 @@ const router = express.Router();
  * @property {number} member_id - member member_ids
  * @property {string} created_at - date of creation
  * @property {string} updated_at - date of last update
+ */
+
+/**
+ * a member type post and put
+ *
+ * @typedef {object} RecipePostPut
+ * @property {string} email - member email
+ * @property {string} name - recipe name
+ * @property {string} description - recipe descrition
+ * @property {string} steps - recipe steps
+ * @property {string} pseudo - member pseudo
+ * @property {string} picture - member picture
  */
 
 /**
@@ -56,10 +69,10 @@ router.get('/:id([0-9]+)', controllerHandler(recipeController.getOneDetails.bind
  * @return {Recipe} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.post('/', validate(recipePostSchema, 'body'), controllerHandler(recipeController.create.bind(recipeController)));
+router.post('/', tokenHandler, validate(recipePostSchema, 'body'), controllerHandler(recipeController.create.bind(recipeController)));
 
 /**
- * PATCH /api/recipes/{id}
+ * PUT /api/recipes/{id}
  *
  * @summary modify a recipe
  * @tags Recipes - The O'Delices recipes
@@ -71,7 +84,7 @@ router.post('/', validate(recipePostSchema, 'body'), controllerHandler(recipeCon
  * @return {Recipe} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.patch('/:id([0-9]+)', validate(recipePatchSchema, 'body'), controllerHandler(recipeController.modify.bind(recipeController)));
+router.put('/:id([0-9]+)', tokenHandler, validate(recipePutSchema, 'body'), controllerHandler(recipeController.modify.bind(recipeController)));
 
 /**
  * DELETE /api/recipes/{id}
@@ -84,6 +97,6 @@ router.patch('/:id([0-9]+)', validate(recipePatchSchema, 'body'), controllerHand
  * @return {object} 204 - success response
  * @return {object} 500 - internal server error
  */
-router.delete('/:id([0-9]+)', controllerHandler(recipeController.delete.bind(recipeController)));
+router.delete('/:id([0-9]+)', tokenHandler, controllerHandler(recipeController.delete.bind(recipeController)));
 
 module.exports = router;

@@ -1,9 +1,10 @@
 const express = require('express');
+const tokenHandler = require('../../controllers/helpers/tokenHandler');
 const controllerHandler = require('../../controllers/helpers/controllerHandler');
 const { ingredientController } = require('../../controllers/api');
 const validate = require('../../validations/validate');
 
-const { post: ingredientPostSchema, patch: ingredientPatchSchema } = require('../../validations/schemas/ingredient.schema');
+const { post: ingredientPostSchema, put: ingredientPutSchema } = require('../../validations/schemas/ingredient.schema');
 
 const router = express.Router();
 
@@ -40,7 +41,7 @@ router.get('/', controllerHandler(ingredientController.getAll.bind(ingredientCon
  * @return {Ingredient} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.post('/', validate(ingredientPostSchema, "body"), controllerHandler(ingredientController.create.bind(ingredientController)));
+router.post('/', tokenHandler, validate(ingredientPostSchema, "body"), controllerHandler(ingredientController.create.bind(ingredientController)));
 
 /**
  * GET /api/ingredients/{id}
@@ -56,7 +57,21 @@ router.post('/', validate(ingredientPostSchema, "body"), controllerHandler(ingre
 router.get('/:id([0-9]+)', controllerHandler(ingredientController.getOne.bind(ingredientController)));
 
 /**
- * PATCH /api/ingredients/{id}
+ * GET /api/ingredients/{name}
+ *
+ * @summary get a ingredient
+ * @tags Ingredients - The O'Delices ingredients
+ *
+ * @param {number} id.path - ingredient id
+ *
+ * @return {Ingredient} 200 - success response
+ * @return {object} 500 - internal server error
+ */
+router.get('/:name', controllerHandler(ingredientController.getOneByName.bind(ingredientController)));
+
+
+/**
+ * PUT /api/ingredients/{id}
  *
  * @summary modify a ingredient
  * @tags Ingredients - The O'Delices ingredients
@@ -69,7 +84,9 @@ router.get('/:id([0-9]+)', controllerHandler(ingredientController.getOne.bind(in
  * @return {Ingredient} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.patch('/:id([0-9]+)', validate(ingredientPatchSchema, 'body'), controllerHandler(ingredientController.modify.bind(ingredientController)));
+router.put('/:id([0-9]+)', tokenHandler, validate(ingredientPutSchema, 'body'), controllerHandler(ingredientController.modify.bind(ingredientController)));
+
+
 
 /**
  * DELETE /api/ingredients/{id}
@@ -82,6 +99,6 @@ router.patch('/:id([0-9]+)', validate(ingredientPatchSchema, 'body'), controller
  * @return {object} 204 - success response
  * @return {object} 500 - internal server error
  */
-router.delete('/:id([0-9]+)', controllerHandler(ingredientController.delete.bind(ingredientController)));
+router.delete('/:id([0-9]+)', tokenHandler, controllerHandler(ingredientController.delete.bind(ingredientController)));
 
 module.exports = router;

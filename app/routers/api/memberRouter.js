@@ -1,9 +1,11 @@
 const express = require('express');
+const tokenHandler = require('../../controllers/helpers/tokenHandler');
+const validate = require('../../validations/validate');
 const controllerHandler = require('../../controllers/helpers/controllerHandler');
 const { memberController } = require('../../controllers/api');
-const validate = require('../../validations/validate');
 
-const { post: memberPostSchema, patch: memberPatchSchema  } = require('../../validations/schemas/member.schema');
+
+const { post: memberPostSchema, put: memberPutSchema  } = require('../../validations/schemas/member.schema');
 
 const router = express.Router();
 
@@ -24,6 +26,19 @@ const router = express.Router();
  */
 
 /**
+ * a member type post and put
+ *
+ * @typedef {object} MemberPostPut
+ * @property {string} email - member email
+ * @property {string} password - member password
+ * @property {string} passwordConfirm - passwordConfirm password
+ * @property {string} firstname - member firstname
+ * @property {string} lastname - member lastname
+ * @property {string} pseudo - member pseudo
+ * @property {string} picture - member picture
+ */
+
+/**
  * GET /api/members
  *
  * @summary get all members
@@ -32,7 +47,7 @@ const router = express.Router();
  * @return {array<Member>} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.get('/', controllerHandler(memberController.getAll.bind(memberController)));
+router.get('/', tokenHandler, controllerHandler(memberController.getAll.bind(memberController)));
 
 /**
  * POST /api/members
@@ -40,7 +55,7 @@ router.get('/', controllerHandler(memberController.getAll.bind(memberController)
  * @summary create a new member
  * @tags Members - The O'Delices recipes
  *
- * @param {Member} request.body - member
+ * @param {MemberPostPut} request.body - member
  *
  * @return {Member} 200 - success response
  * @return {object} 500 - internal server error
@@ -58,22 +73,22 @@ router.post('/', validate(memberPostSchema, "body"), controllerHandler(memberCon
  * @return {Member} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.get('/:id([0-9]+)', controllerHandler(memberController.getOneDetails.bind(memberController)));
+router.get('/:id([0-9]+)', tokenHandler, controllerHandler(memberController.getOneDetails.bind(memberController)));
 
 /**
- * PATCH /api/members/{id}
+ * PUT /api/members/{id}
  *
  * @summary modify a member
  * @tags Members - The O'Delices recipes
  *
  * @param {number} id.path - member id
  * 
- * @param {Member} request.body - member body
+ * @param {MemberPostPut} request.body - member body
  *
  * @return {Member} 200 - success response
  * @return {object} 500 - internal server error
  */
-router.patch('/:id([0-9]+)', validate(memberPatchSchema, 'body'), controllerHandler(memberController.modifyMember.bind(memberController)));
+router.put('/:id([0-9]+)', tokenHandler, validate(memberPutSchema, 'body'), controllerHandler(memberController.modifyMember.bind(memberController)));
 
 /**
  * DELETE /api/members/{id}
@@ -86,6 +101,6 @@ router.patch('/:id([0-9]+)', validate(memberPatchSchema, 'body'), controllerHand
  * @return {object} 204 - success response
  * @return {object} 500 - internal server error
  */
-router.delete('/:id([0-9]+)', controllerHandler(memberController.delete.bind(memberController)));
+router.delete('/:id([0-9]+)', tokenHandler, controllerHandler(memberController.delete.bind(memberController)));
 
 module.exports = router;

@@ -27,8 +27,12 @@ class MemberController extends CoreController {
     debug(`${this.constructor.name} modifyMember`);
     const { id } = request.params;
     const {
+      email,
       password,
       passwordConfirm,
+      picture, // = request.file.path,
+      firstname,
+      lastname,
       pseudo
     } = request.body;
     if(password !== passwordConfirm) {
@@ -60,6 +64,9 @@ class MemberController extends CoreController {
       email,
       password,
       passwordConfirm,
+      picture,
+      firstname,
+      lastname,
       pseudo
     } = request.body;
     if(!email || !pseudo || !password || !passwordConfirm) {

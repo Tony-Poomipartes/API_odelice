@@ -17,11 +17,11 @@ const authMiddleware = (request, response, next) => {
   }
   const token = authHeader.split(' ')[1];
   try {
-    const decoded = jwt.verify(token, '&11+_CG*BcBJ,O&B1_FAkRrPV21*_m^CHhùW3-Oezu3knIE8');
+    const decoded = jwt.verify(token, "&11+_CG*BcBJ,O&B1_FAkRrPV21*_m^CHhùW3-Oezu3knIE8");
     request.userId = decoded.id;
     next();
-  } catch (err) {
-    next(err);
+  } catch (response) { //todo: gerer et implementer la gestion erreur 
+    next(response.status(401).json({ message: 'decodage token failed' }));
   }
 };
 
