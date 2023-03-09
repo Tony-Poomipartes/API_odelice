@@ -6,7 +6,7 @@ const emailRegex = /^[a-zA-Z0-9.!#$%&''*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-
 const schema = {
 
     post: Joi.object().keys({
-      email: Joi.string().email().pattern(emailRegex).required(),
+      email: Joi.string().pattern(emailRegex).required(),
       password: Joi.string().required(),
     }).required(),
 };

@@ -20,7 +20,7 @@ const authMiddleware = (request, response, next) => {
     const decoded = jwt.verify(token, "&11+_CG*BcBJ,O&B1_FAkRrPV21*_m^CHhùW3-Oezu3knIE8");
     request.userId = decoded.id;
     next();
-  } catch (response) { //todo: gerer et implementer la gestion erreur 
+  } catch (error) { //todo: gerer et implementer la gestion erreur 
     next(response.status(401).json({ message: 'decodage token failed' }));
   }
 };
