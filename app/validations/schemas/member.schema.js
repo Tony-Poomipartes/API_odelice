@@ -6,7 +6,7 @@ const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{8,15}$/;
 const schema = {
 
   post: Joi.object().keys({
-    email: Joi.string().email().pattern(emailRegex).required(),
+    email: Joi.string().pattern(emailRegex).required(),
     password: Joi.string().pattern(passwordRegex).required(),
     passwordConfirm: Joi.string().pattern(passwordRegex).required(),
     firstname: Joi.string(),
@@ -16,7 +16,7 @@ const schema = {
   }).required(),
 
   put: Joi.object().keys({
-    email: Joi.string().email().pattern(emailRegex),
+    email: Joi.string().pattern(emailRegex),
     password: Joi.string().pattern(passwordRegex),
     passwordConfirm: Joi.string().pattern(passwordRegex),
     firstname: Joi.string(),
