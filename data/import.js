@@ -13,6 +13,15 @@ async function importData(client) {
   //*------------------ingredients-------------------
   const ingredientsPromises = [];
   ingredients.forEach((ingredient) => {
+
+    const { name, type } = ingredient;
+
+    const capitalizedTerms = {
+        name: (name).replace(/^\w/, (name) => name.toUpperCase()),
+        type: (type).replace(/^\w/, (type) => type.toUpperCase())
+    };
+    ingredient = capitalizedTerms;
+
     const query = client.query(
       `
           INSERT INTO "ingredient"
@@ -124,13 +133,13 @@ async function importData(client) {
 
 (async () => {
   const client = new Client({ 
-    database: process.env.PGDATABASE
+    // database: process.env.PGDATABASE
     // remplacer process.env.PGDATABASE par les infos ci-dessous
-    // user:'postgres',
-    // host:'containers-us-west-188.railway.app',
-    // database:'railway',
-    // password:'hxwt6lq6FHRdjR5HfJ43',
-    // port: 7856
+    user:'postgres',
+    host:'containers-us-west-188.railway.app',
+    database:'railway',
+    password:'A1QgUXrqyzK1xyhcM6w9',
+    port: 7189
   });
   await client.connect();
   await importData(client);

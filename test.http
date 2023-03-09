@@ -2,17 +2,16 @@
 GET http://localhost:3000/api/members
 
 ### Route principale
-GET http://localhost:3000/api/recipes
+GET http://localhost:3000/api/recipes/1
 
 ### 404
 GET http://localhost:3000/api/rocipes
 
-### customisation cadex
+### customisation
 GET http://localhost:3000/api/members?firstname=Julian
 
-### customisations cadex avec valeur non valide
+### customisations  avec valeur non valide
 GET http://localhost:3000/api/member?firstname=$$$&email=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-
 
 ### ajout de member
 POST http://localhost:3000/api/members
@@ -21,10 +20,39 @@ Content-Type: application/json
 {
   "email": "j.assange2@wikileaks.au",
   "password": "USA.is_A-f*'inB1tch",
+  "passwordConfirm": "USA.is_A-f*'inB1tch",
   "firstname": "Julian2",
   "lastname": "Assange2",
   "pseudo": "Mendax2",
-  "picture": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.l8JoMRcKDyzYpcDlV4uQoQHaE8%26pid%3DApi&f=1&ipt=39a0c2ad4ff89dc6bab9b967d0a3ccae3d7dd7afe89a190fe571a2cd9a4877cf&ipo=images"
+  "picture": ""
+}
+
+### ajout de member : mettre le lien web https://odelicesback-production.up.railway.app
+POST http://localhost:3000/api/members
+Content-Type: application/json
+
+{
+  "email": "j.assange2@wikileaks.au",
+  "password": "Ab12345678",
+  "passwordConfirm": "Ab12345678",
+  "firstname": "Julian2",
+  "lastname": "Assange2",
+  "pseudo": "Mendax2",
+  "picture": ""
+}
+
+### ajout de member : mettre le lien web https://odelicesback-production.up.railway.app/api/members
+POST http://localhost:3000/api/members
+Content-Type: application/json
+
+{
+  "email": "a.lovelace@babbage.en",
+  "password": "G1rlzCanH4ck",
+  "passwordConfirm": "G1rlzCanH4ck",
+  "firstname": "Ada",
+  "lastname": "Byron Lovelace",
+  "pseudo": "Princess of Parallelograms",
+  "picture": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.7uoCVy_mlSKiG_NhtNAu-gHaE4%26pid%3DApi&f=1&ipt=b829ec2be7b9003ce89e51f395251e7b21f80fac643f3f3aad5f126531e66e0d&ipo=images"
 }
 
 ### ajout de termes
@@ -39,11 +67,23 @@ Content-Type: application/json
   "member_id": 6
 }
 
+### login
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "j.assange2@wikileaks.au",
+  "password": "Ab12345678"
+}
+
 ### ajout de ingredient
 POST http://localhost:3000/api/ingredients
 Content-Type: application/json
 
 {
-  "name": "potimarron",
-  "type": "légume"
+  "name": "Pâte de curry",
+  "type": "Epices"
 }
+
+### Route principale  : mettre le lien web https://odelicesback-production.up.railway.app
+GET http://localhost:3000/api/ingredients/663
