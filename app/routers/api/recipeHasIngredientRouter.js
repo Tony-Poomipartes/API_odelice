@@ -18,30 +18,6 @@ const router = express.Router();
  */
 
 /**
- * GET /api/RecipeHasIngredient
- *
- * @summary get all RecipeHasIngredient
- * @tags RecipeHasIngredient - The O'Delices recipes
- *
- * @return {array<RecipeHasIngredient>} 200 - success response
- * @return {object} 500 - internal server error
- */
-router.get('/', controllerHandler(recipeHasIngredientController.getAll.bind(recipeHasIngredientController)));
-
-/**
- * GET /api/RecipeHasIngredient/{id}
- *
- * @summary get a RecipeHasIngredient
- * @tags RecipeHasIngredient - The O'Delices RecipeHasIngredient
- *
- * @param {number} id.path - RecipeHasIngredient id
- *
- * @return {RecipeHasIngredient} 200 - success response
- * @return {object} 500 - internal server error
- */
-router.get('/:id([0-9]+)', controllerHandler(recipeHasIngredientController.getOne.bind(recipeHasIngredientController)));
-
-/**
  * POST /api/RecipeHasIngredient
  *
  * @summary create a new recipe
