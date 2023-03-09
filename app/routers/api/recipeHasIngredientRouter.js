@@ -3,7 +3,7 @@ const controllerHandler = require('../../controllers/helpers/controllerHandler')
 const { recipeHasIngredientController} = require('../../controllers/api');
 const validate = require('../../validations/validate');
 
-const { post: recipeHasIngredientPostSchema, patch: recipeHasIngredientPatchSchema } = require('../../validations/schemas/recipe.schema');
+const { post: recipeHasIngredientPostSchema, patch: recipeHasIngredientPatchSchema } = require('../../validations/schemas/recipeHasIngredient.schema');
 
 const router = express.Router();
 
@@ -16,6 +16,30 @@ const router = express.Router();
  * @property {string} recipe_id - recipe recipe_id
  * @property {number} member_id - member member_ids
  */
+
+/**
+ * GET /api/RecipeHasIngredient
+ *
+ * @summary get all RecipeHasIngredient
+ * @tags RecipeHasIngredient - The O'Delices recipes
+ *
+ * @return {array<RecipeHasIngredient>} 200 - success response
+ * @return {object} 500 - internal server error
+ */
+router.get('/', controllerHandler(recipeHasIngredientController.getAll.bind(recipeHasIngredientController)));
+
+/**
+ * GET /api/RecipeHasIngredient/{id}
+ *
+ * @summary get a RecipeHasIngredient
+ * @tags RecipeHasIngredient - The O'Delices RecipeHasIngredient
+ *
+ * @param {number} id.path - RecipeHasIngredient id
+ *
+ * @return {RecipeHasIngredient} 200 - success response
+ * @return {object} 500 - internal server error
+ */
+router.get('/:id([0-9]+)', controllerHandler(recipeHasIngredientController.getOne.bind(recipeHasIngredientController)));
 
 /**
  * POST /api/RecipeHasIngredient
