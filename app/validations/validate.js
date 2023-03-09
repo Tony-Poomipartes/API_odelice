@@ -1,6 +1,8 @@
 const debug = require('debug')('odelice:validate');
 const BadInputError = require('../errors/BadInputError');
 
+
+
 /**
  * Factory returning a validation middleware
  *
@@ -8,6 +10,7 @@ const BadInputError = require('../errors/BadInputError');
  * @param {("query"|"body"|"params")} dataSource - the source object
  * @returns {function} a validation middleware
  */
+
 function validate(schema, dataSource) {
     debug('create a new validation middleware');
     return async (request, response, next) => {

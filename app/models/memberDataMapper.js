@@ -2,7 +2,6 @@ const debug = require('debug')('odelice:dataMapper');
 const CoreDataMapper = require('./CoreDataMapper');
 const client = require('./helpers/database');
 
-const bcrypt = require('bcrypt');
 /** Class representing a member data mapper. */
 class MemberDataMapper extends CoreDataMapper {
 	static tableName = 'member';
@@ -53,7 +52,7 @@ class MemberDataMapper extends CoreDataMapper {
 		debug(`${this.constructor.name} findByPk(${id})`);
 		const preparedQuery = {
 			text:
-			 `SELECT * FROM "member_details" WHERE id=$1`,
+			  `SELECT * FROM "member_details" WHERE id=$1`,
 			values: [id],
 		};
 		const results = await client.query(preparedQuery);
