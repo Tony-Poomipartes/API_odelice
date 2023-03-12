@@ -1,17 +1,13 @@
 const Joi = require('joi');
 
-const arrayrequest = !null;
-
 const schema = {
 
+  post: Joi.object().keys({
+    ingredients: {
+      type: [!null || undefined],
+    },
+  }).required(),
 
-
-
-    post: Joi.object().keys({
-      ingredients: Joi.array().required(),
-    }).required(),
-
-  
   // post: Joi.().keys({
   //     ingredients: {
   //       type: [ !null || undefined ],
