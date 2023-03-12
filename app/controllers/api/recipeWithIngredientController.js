@@ -4,23 +4,24 @@ const recipeWithIngredientDataMapper = require('../../models/recipeWithIngredien
 
 /** Class representing a recipe controller. */
 class recipeWithIngredientController extends CoreController {
-    static dataMapper = recipeWithIngredientDataMapper;
+  static dataMapper = recipeWithIngredientDataMapper;
 
-    /**
+  /**
      * create a recipe controller
     *
     * @augments CoreController
     */
-    constructor() {
-        super();
-        debug('recipeWithIngredientController created');
-    }
-    async getAllRecipes(request, response) {
-      debug(`${this.constructor.name} getAll`);
-      const ingredients = request.body.ingredients;
-      const results = await this.constructor.dataMapper.findAllrecipes(ingredients);
-      console.log(request.body);
-      response.json(results);
+  constructor() {
+    super();
+    debug('recipeWithIngredientController created');
+  }
+
+  async getAllRecipes(request, response) {
+    debug(`${this.constructor.name} getAll`);
+    const ingredients = request.query.name;
+    const results = await this.constructor.dataMapper.findAllrecipes(ingredients);
+    console.log(request.query.name);
+    response.json(results);
   }
 }
 
