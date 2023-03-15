@@ -3,10 +3,19 @@
 
 BEGIN;
 
+DROP DOMAIN IF EXISTS
+"email" CASCADE;
+
 CREATE DOMAIN "email" AS text CHECK (
     value ~ '^[a-zA-Z0-9.!#$%&''*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$'
 );
 
+DROP TABLE IF EXISTS
+"member",
+"recipe",
+"comment",
+"ingredient",
+"recipe_has_ingredient" CASCADE;
 
 CREATE TABLE "member" (
     "id" INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
