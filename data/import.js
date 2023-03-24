@@ -136,10 +136,10 @@ async function importData(client) {
     // database: process.env.PGDATABASE
     // remplacer process.env.PGDATABASE par les infos ci-dessous
     user:'postgres',
-    host:'containers-us-west-188.railway.app',
-    database:'railway',
-    password:'A1QgUXrqyzK1xyhcM6w9',
-    port: 7189
+    host:'***********',
+    database:'******',
+    password:'**********',
+    port: ****
   });
   await client.connect();
   await importData(client);
