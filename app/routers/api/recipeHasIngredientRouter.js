@@ -14,7 +14,7 @@ const router = express.Router();
  * @property {string} quantity - quantity of the ingredient
  * @property {string} units - units of the quantity
  * @property {string} recipe_id - recipe recipe_id
- * @property {number} member_id - member member_ids
+ * @property {number} ingredient_id - ingredient ingredient_ids
  */
 
 /**

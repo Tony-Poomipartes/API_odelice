@@ -2,8 +2,19 @@
 
 table Recipe
 
-conserve t'on les champs "Rate" et "Steps"?(garder steps NOT NULL , a comfirmer)
-champ "description" enlever NULL( ne pas mettre obligatoirement NULL)
+Voici les commandes dont je parlais pour rapatrier le repo de votre Apo sur votre repo perso !
+cloner le repo original : git clone git@github.com/O-clock-Maya/NomDuRepo (on peut aussi le faire en changeant le nom du repo : git clone git@github.com/O-clock-Maya/NomDuRepo new-repo-name)
+récuperer toutes les branches en local : for BRANCH in $(git branch -a | grep remotes | grep -v HEAD | grep -v master); do git branch --track "${BRANCH#remotes/origin/}" "${BRANCH}"; done
+ à faire uniquement si le repo contient des fichiers peda :
+supprimer les fichiers O'clock : for BRANCH in $(git branch); do git checkout ${BRANCH} && git filter-branch -f --index-filter 'git rm --cached --ignore-unmatch README.md'; done
+la commande ci-dessus supprimera les fichiers O'clock dans toutes les branches
+maintenant, aller sur votre github perso et créer un nouveau repo (par exemple : new-repo-name)
+récupérer l'url ssh : git@github.com/VotreUsernameGH/new-repo-name.git
+vérifier la remote actuelle : git remote (la remote par defaut devrait être origin. Si ce n'est pas le cas, adapte la commande suivante.)
+supprimer la remote actuelle : git remote remove origin
+ajouter la nouvelle remote : git remote add origin git@github.com/VotreUsernameGH/new-repo-name.git
+il ne reste plus qu'à push : git push --all (--all est l'option pour push toutes les branches sur le nouveau repo)
+et puis... C'est tout :fusée:
 
 Table Recipe_has_ingredient
 

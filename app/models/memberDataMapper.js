@@ -58,6 +58,19 @@ class MemberDataMapper extends CoreDataMapper {
 		const results = await client.query(preparedQuery);
 		return results.rows[0];
 	}
+      /**
+    * remove an entry
+    *
+    * @param {number} id - the entry id
+    */
+      async delete(id) {
+        debug(`${this.constructor.name} delete(${id})`);
+        const preparedQuery = {
+            text: `DELETE FROM "${this.constructor.tableName}" WHERE id=$1`,
+            values: [id],// todo delete in cascade all recipe where member_id =$1 and all lignes where recipe_id is in the recipe_has_ingredient, all comments where the member_id is because all are linked with the not null in the sql file
+        };
+        await client.query(preparedQuery);
+    }
 	
 }
 

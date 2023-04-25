@@ -2,7 +2,7 @@
 
 BEGIN;
 
-CREATE VIEW recipe_info AS
+CREATE OR REPLACE VIEW "recipe_info" AS
 SELECT 
     "id",
     "name",
@@ -14,7 +14,7 @@ SELECT
     "updated_at"
 FROM "recipe";
 
-CREATE VIEW recipe_ingredients AS
+CREATE OR REPLACE VIEW "recipe_ingredients" AS
 SELECT 
     "recipe_id",
     json_agg(json_build_object('name', "ingredient"."name", 'quantity', "recipe_has_ingredient"."quantity", 'units', "recipe_has_ingredient"."units")) AS "ingredients"
@@ -22,7 +22,7 @@ FROM "recipe_has_ingredient"
 JOIN "ingredient" ON "recipe_has_ingredient"."ingredient_id" = "ingredient"."id"
 GROUP BY "recipe_has_ingredient"."recipe_id";
 
-CREATE VIEW recipe_with_ingredients AS
+CREATE OR REPLACE VIEW "recipe_with_ingredients" AS
 SELECT
     "recipe_info"."id",
     "recipe_info"."name",

@@ -7,8 +7,8 @@ GET http://localhost:3000/api/recipes/1
 ### 404
 GET http://localhost:3000/api/rocipes
 
-### customisation
-GET http://localhost:3000/api/members?firstname=Julian
+### customisation 
+GET http://localhost:3000/api/recipes?ingredients=Caille
 
 ### customisations  avec valeur non valide
 GET http://localhost:3000/api/member?firstname=$$$&email=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa

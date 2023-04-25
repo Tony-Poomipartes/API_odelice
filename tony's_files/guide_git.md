@@ -44,7 +44,7 @@ SauceLabs)
 - 📚 docs:      Documentation
 - ✨ feat:      Ajout d'une fonctionnalité
 - 🐛 fix:       Correction de bug
-- 🏎 perf:     Amélioration des performances
+- 🏎  perf:     Amélioration des performances
 - ➕ refactor:  Changement du code qui ne change rien au fonctionnement
 - 💄  style:    Changement du style du code (sans changer la logique)
 - 🔌 test:      Modification des tests

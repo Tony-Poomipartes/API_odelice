@@ -153,7 +153,7 @@ CREATE FUNCTION update_ingredient(ingredient_data json) RETURNS ingredient AS $$
 $$ LANGUAGE sql STRICT;
 
 --?-----------------------recipe_has_ingredient-----------------
--- Function to create a new recipe_has_ingredient.
+-- Function to create a new line for recipe_has_ingredient.
 CREATE FUNCTION new_recipe_has_ingredient(recipe_has_ingredient_data json) RETURNS recipe_has_ingredient AS $$
 INSERT INTO
     "recipe_has_ingredient" (

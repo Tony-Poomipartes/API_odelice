@@ -10,7 +10,7 @@ const router = express.Router();
 /**
  * a auth type
  *
- * @typedef {object} auth
+ * @typedef {object} Auth
  * @property {string} email - member email
  * @property {string} password - member password
  */
