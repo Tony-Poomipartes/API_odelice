@@ -1,39 +1,56 @@
--- Verify cadex:init on pg
+-- Verify odelice:init on pg
+
 BEGIN;
 
+-- XXX Add verifications here.
 SELECT
   "id",
-  "content"
+  "email",
+  "password",
+  "firstname",
+  "lastname",
+  "pseudo",
+  "picture"
 FROM
-  "name";
+  "member"
+WHERE false;
 
 SELECT
   "id",
-  "content"
+  "name",
+  "description",
+  "steps",
+  "picture",
+  "member_id"
 FROM
-  "adjective";
+  "recipe"
+WHERE false;
 
 SELECT
   "id",
-  "content"
+  "content",
+  "rate",
+  "member_id",
+  "recipe_id"
 FROM
-  "verb";
+  "comment"
+WHERE false;
 
 SELECT
   "id",
-  "content"
+  "name",
+  "type"
 FROM
-  "complement";
+  "ingredient"
+WHERE false;
 
 SELECT
   "id",
-  "name_id",
-  "adjective_id",
-  "verb_id",
-  "complement_id",
-  "correction",
-  "rating"
+  "quantity",
+  "units",
+  "recipe_id",
+  "ingredient_id"
 FROM
-  "combinaison";
-
+  "recipe_has_ingredient"
+WHERE false;
 ROLLBACK;

@@ -1,9 +1,10 @@
 const express = require('express');
-const cadexController = require('../controllers/cadexController');
+const apiRouteur = require('./api');
+const websiteRouter = require('./website');
 
 const router = express.Router();
 
-router.get('/cadex', cadexController.get);
-router.post('/cadex', cadexController.post);
+router.use('/api', apiRouteur);
+router.use('/', websiteRouter);
 
 module.exports = router;

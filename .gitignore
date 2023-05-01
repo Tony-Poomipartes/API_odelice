@@ -24,9 +24,21 @@ package-lock.json
 #vscode
 .vs_code/
 
+#certificate
+certificate/
+server.cert
+server.key
+
 #config
 .env
 sqitch.conf
+
+#data
+comments.json
+ingredients.json
+recipes.json
+recipe_has_ingredient.json
+members.json
 
 #test
 coverage/

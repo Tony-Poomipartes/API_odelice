@@ -1,10 +1,12 @@
--- Revert cadex:init from pg
+-- Revert odelice:init from pg
+
 BEGIN;
 
-DROP TABLE "name",
-"adjective",
-"verb",
-"complement",
-"combinaison";
 
+-- XXX Add DDLs here.
+DROP TABLE
+"member", "recipe", "comment", "ingredient", "recipe_has_ingredient" CASCADE;
+
+DROP DOMAIN 
+"email";
 COMMIT;

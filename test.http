@@ -1,23 +1,89 @@
 ### Route principale
-GET http://localhost:3000/api/cadex
+GET http://localhost:3000/api/members
+
+### Route principale
+GET http://localhost:3000/api/recipes/1
 
 ### 404
-GET http://localhost:3000/api/codex
+GET http://localhost:3000/api/rocipes
 
-### customisation cadex
-GET http://localhost:3000/api/cadex?name=nib&verb=retourne
+### customisation 
+GET http://localhost:3000/api/recipes?ingredients=Caille
 
-### customisations cadex avec valeur non valide
-GET http://localhost:3000/api/cadex?name=$$$&verb=retourne
+### customisations  avec valeur non valide
+GET http://localhost:3000/api/member?firstname=$$$&email=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
-### customisations cadex avec propriété non valide
-GET http://localhost:3000/api/cadex?bidule=truc
-
-### ajout de termes
-POST http://localhost:3000/api/cadex
+### ajout de member
+POST http://localhost:3000/api/members
 Content-Type: application/json
 
 {
-  "name": "Miles Davis",
-  "verb": "trompe"
+  "email": "j.assange2@wikileaks.au",
+  "password": "USA.is_A-f*'inB1tch",
+  "passwordConfirm": "USA.is_A-f*'inB1tch",
+  "firstname": "Julian2",
+  "lastname": "Assange2",
+  "pseudo": "Mendax2",
+  "picture": ""
 }
+
+### ajout de member : mettre le lien web https://odelicesback-production.up.railway.app
+POST http://localhost:3000/api/members
+Content-Type: application/json
+
+{
+  "email": "j.assange2@wikileaks.au",
+  "password": "Ab12345678",
+  "passwordConfirm": "Ab12345678",
+  "firstname": "Julian2",
+  "lastname": "Assange2",
+  "pseudo": "Mendax2",
+  "picture": ""
+}
+
+### ajout de member : mettre le lien web https://odelicesback-production.up.railway.app/api/members
+POST http://localhost:3000/api/members
+Content-Type: application/json
+
+{
+  "email": "a.lovelace@babbage.en",
+  "password": "G1rlzCanH4ck",
+  "passwordConfirm": "G1rlzCanH4ck",
+  "firstname": "Ada",
+  "lastname": "Byron Lovelace",
+  "pseudo": "Princess of Parallelograms",
+  "picture": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.7uoCVy_mlSKiG_NhtNAu-gHaE4%26pid%3DApi&f=1&ipt=b829ec2be7b9003ce89e51f395251e7b21f80fac643f3f3aad5f126531e66e0d&ipo=images"
+}
+
+### ajout de termes
+POST http://localhost:3000/api/repipes
+Content-Type: application/json
+
+{
+  "name": "vault7",
+  "description": "one of the best leak's pie of the chief",
+  "steps": "{'get somme leaks from NSA', 'get somme leaks from CIA', 'get somme leaks from the army', 'get a whisleblower',' mix them well' , 'publish', 'wait and see'}",
+  "picture": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.8cNbfLcoC6v9UKDSDghnnAHaE8%26pid%3DApi&f=1&ipt=b424427b90df207488fbaa170d81984a0d8a222e85f39a5ca4fa9d80c7d3a223&ipo=images",
+  "member_id": 6
+}
+
+### login
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "j.assange2@wikileaks.au",
+  "password": "Ab12345678"
+}
+
+### ajout de ingredient
+POST http://localhost:3000/api/ingredients
+Content-Type: application/json
+
+{
+  "name": "Pâte de curry",
+  "type": "Epices"
+}
+
+### Route principale  : mettre le lien web https://odelicesback-production.up.railway.app
+GET http://localhost:3000/api/ingredients/663

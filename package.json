@@ -1,45 +1,53 @@
 {
-  "name": "spedata-express-cadex-benoitoclock",
+  "name": "projet-10-systeme-d-back",
   "version": "1.0.0",
-  "description": "En 1925, Jacques Prévert, André Breton, Frida Kahlo et une poignée d'autres figures emblématiques de l'époque s'ennuyaient et décidèrent de jouer à un jeu très simple mais hilarant (enfin, ça, ils ne le savaient pas avant d'y jouer mais ils l'ont rapidement constaté). En groupe de 3 à 5 personnes, chacun écrit une partie d'une phrase sur un papier, le plie de façon à masquer ce qu'il/elle a écrit et passe le papier à son voisin, qui écrit la suite... sans connaître le début. La première phrase générée, _le cadavre exquis boira le vin nouveau_, donna son nom au jeu.",
+  "description": "*O’délices est un site qui réunit tous les amoureux de la cuisine et les passionnés de gastronomie. La plateforme permet d'accéder à des recettes de cuisines originales et variées à partir de 1 ingrédient ou plus qu’ils ont dans leur frigo. Les membres peuvent également créer, commenter et noter des recettes, et découvrir des recettes populaires. Avec O'délices, plus besoin de se prendre la tête pour trouver des idées de recettes.  Par la suite, nous souhaitons faire évoluer le site vers un réseau social axé sur le partage et la découverte des recettes. Les membres pourront ainsi découvrir les recettes des autres membres, échanger des conseils et des astuces culinaires, poster et découvrir des vidéos de recettes. De plus, ils pourront également s’informer des nouvelles tendances culinaires, et trouver des recettes encore plus originales à partager avec leurs amis et leurs proches.*",
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "test": "jest --verbose",
-    "dev": "DEBUG=cadex:* npx nodemon",
-    "dev-request": "DEBUG=cadex:server npx nodemon",
-    "dev-nodb": "DEBUG=cadex:*,-cadex:dataMapper npx nodemon",
-    "prod": "NODE_ENV=production npx nodemon",
-    "resetdb": "psql -d cadex -f data/create_tables.sql; psql -d cadex -f data/seeding.sql"
+    "start": "node index.js",
+    "dev": "NODE_ENV=development DEBUG=odelice:* npx nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "resetdb": "sqitch revert -y && sqitch deploy && node data/import.js",
+    "startdb": "sqitch deploy && node data/import.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/O-clock-Maya/spedata-express-cadex-BenoitOClock.git"
+    "url": "git+https://github.com/O-clock-Maya/projet-10-systeme-d-back.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/O-clock-Maya/spedata-express-cadex-BenoitOClock/issues"
+    "url": "https://github.com/O-clock-Maya/projet-10-systeme-d-back/issues"
   },
-  "homepage": "https://github.com/O-clock-Maya/spedata-express-cadex-BenoitOClock#readme",
+  "homepage": "https://github.com/O-clock-Maya/projet-10-systeme-d-back#readme",
+  "devDependencies": {
+    "clean-jsdoc-theme": "^4.2.2",
+    "eslint": "^8.32.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jest": "^27.2.1",
+    "jest": "^29.3.1",
+    "jsdoc": "^4.0.0"
+  },
   "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
     "bunyan": "^1.8.15",
+    "cors": "^2.8.5",
     "debug": "^4.3.4",
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
+    "events": "^3.3.0",
     "express": "^4.18.2",
     "express-jsdoc-swagger": "^1.8.0",
-    "joi": "^17.7.0",
-    "pg": "^8.8.0"
-  },
-  "devDependencies": {
-    "eslint": "^8.31.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jest": "^27.2.1",
-    "jest": "^29.3.1"
+    "joi": "^17.8.3",
+    "jsonwebtoken": "^9.0.0",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.8.0",
+    "util": "^0.12.5"
   }
 }
